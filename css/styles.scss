@@ -24,6 +24,11 @@ a {
     --color-white: #fff;
     --color-light-blue: #009fe3;
     --color-black: #000;
+    --color-gray: #f6f6f6;
+    --color-blue: #eceff1;
+    --color-gray-text: #757575;
+    --color-gray-2: #737575;
+    --color-blue-2: #bbdefb;
 }
 
 //responsive breakpoints
@@ -75,13 +80,43 @@ $xxl-breakpoint: 1400px; //Extra extra large
 }
 @mixin h6 {
     color: var(--color-light-blue);
+    color: var(--color-gray-text);
     font-size: 1.2rem;
     font-weight: 700;
 }
 @mixin h3 {
-    color: var(--color-black);
+    color: var(--color-light-blue);
     font-weight: 700;
     font-size: 1.5rem;
+}
+@mixin swiper {
+    width: 100%;
+    height: 100%;
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
 }
 header {
     position: absolute;
@@ -145,7 +180,7 @@ header {
             position: fixed;
             z-index: 999;
             width: 100%;
-            background-color:rgba(0, 0, 0, 0.548);
+            background-color: rgba(0, 0, 0, 0.548);
             top: 0;
             padding: 0.5rem 0rem !important;
             .navbar-brand {
@@ -157,7 +192,7 @@ header {
             .menu-area {
                 ul {
                     margin-bottom: 0rem !important;
-                   /*  li {
+                    /*  li {
                         a {
                             &.active {
                                 color: var(--color-black) !important;
@@ -274,7 +309,7 @@ header {
     .swiper {
         width: 100%;
         height: 100%;
-        .slide-inner{
+        .slide-inner {
             width: 100%;
         }
         .swiper-slide {
@@ -375,87 +410,78 @@ header {
     }
 }
 .about-us {
-    min-height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     position: relative;
     overflow: hidden;
+    padding: 5rem 2rem;
     h6 {
         @include h6;
     }
     h3 {
-       @include h3;
-    }
-    p {
-        font-size: 1rem;
-        color: var(--color-black);
-        font-weight: 300;
-    }
-    .button {
-        @include button;
-        color: var(--color-light-blue);
-        border-color: var(--color-light-blue);
-        &::before,
-        &::after {
-            border-color: var(--color-light-blue);
-        }
+        @include h3;
     }
 
-    .icon-wrapper {
-        position: absolute;
-        max-width: 4rem;
-        z-index: 9;
+    .box {
+        &:hover {
+            .icon-box {
+                border: 2px solid var(--color-light-blue);
+            }
+        }
+        .icon-box {
+            height: 6rem;
+            margin-left: 0;
+            margin-right: 0;
+            width: 6rem;
+            border-radius: 50%;
+            padding: 0.5rem;
+            border: 2px solid transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s all;
 
-        &:nth-child(1) {
-            top: 0;
-            left: 0;
-            animation: animate-figure1 infinite 3s;
-            @media screen and(max-width:$lg-breakpoint) {
-                left: 1rem;
-                top: 2rem;
+            img {
+                max-width: 3.5rem;
             }
         }
-        &:nth-child(2) {
-            top: 0;
-            right: 0;
-            animation: animate-figure2 infinite 3s;
-            @media screen and(max-width:$lg-breakpoint) {
-                right: 1rem;
-                top: 2rem;
+        .content {
+            h3 {
+                color: var(--color-gray-text);
+                font-weight: 700;
+                font-size: 1.5rem;
+                margin: 1.5rem 0rem;
             }
-        }
-        &:nth-child(3) {
-            bottom: 4rem;
-            left: 0;
-            animation: animate-figure3 infinite 3s;
-            @media screen and(max-width:$lg-breakpoint) {
-                left: 3rem;
-            }
-        }
-        &:nth-child(4) {
-            bottom: 4rem;
-            right: 0;
-            animation: animate-figure4 infinite 3s;
-            @media screen and(max-width:$lg-breakpoint) {
-                right: 3rem;
+            p {
+                font-size: 1rem;
+                font-weight: 300;
+                color: var(--color-gray-text);
             }
         }
     }
 }
 
-.services{
-    
-    .title{
+.services {
+    /* padding: 3rem 0rem 0rem 0rem; */
+    background-color: var(--color-gray);
+    position: relative;
+    .container-fluid {
+        padding: 0rem;
+        .row {
+            padding: 0rem;
+        }
+    }
+    .title {
         h6 {
             @include h6;
         }
         h3 {
-           @include h3;
+            @include h3;
         }
-        .button-area{
-            .button{
+        .button-area {
+            .button {
                 @include button;
                 color: var(--color-light-blue);
                 border-color: var(--color-light-blue);
@@ -464,6 +490,272 @@ header {
                     border-color: var(--color-light-blue);
                 }
             }
+        }
+    }
+    .services-area {
+        margin-top: 2rem;
+        .swiper {
+            @include swiper;
+            .modal-swiper-button-next,
+            .swiper-rtl .modal-swiper-button-prev {
+                top: 2rem;
+                color: var(--color-light-blue);
+                top: 45%;
+                height: 100%;
+            }
+            .modal-swiper-button-prev,
+            .swiper-rtl .modal-swiper-button-next {
+                top: 45%;
+                left: auto;
+                right: 3rem;
+                color: var(--color-light-blue);
+                height: 100%;
+            }
+            .service-content {
+                background-color: var(--color-gray);
+                padding: 5rem;
+                text-align: left;
+                h6 {
+                    @include h6;
+                }
+                h4 {
+                    margin-bottom: 3rem;
+                    strong {
+                        font-weight: 500;
+                        color: var(--color-light-blue);
+                        font-size: 2.7rem;
+                        position: relative;
+                        border-right: 1px solid var(--color-gray-text);
+                        padding-right: 1rem;
+                    }
+                    span {
+                        font-weight: 400;
+                        position: relative;
+                        color: var(--color-gray-text);
+                        padding-left: 1rem;
+                    }
+                }
+                p {
+                    font-size: 1rem;
+                    color: var(--color-gray-2);
+                    font-weight: 400;
+                }
+                .expert,
+                .time {
+                    padding: 1.25rem 2.5rem 1.25rem 1.25rem;
+                    margin-top: 3rem;
+                }
+                .expert {
+                    background-color: var(--color-blue-2);
+
+                    i {
+                        color: #0d47a1;
+                        width: 2.5rem;
+                        height: 2.5rem;
+                        border: 2px solid #0d47a1;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 50%;
+                        font-size: 1.5rem;
+                    }
+                    .expert-detail {
+                        padding-left: 1.25rem;
+                        h5 {
+                            color: #0d47a1;
+                            margin-bottom: 0rem;
+                            font-size: 1.3rem;
+                            font-weight: 400;
+                        }
+                        span {
+                            color: var(--color-white);
+                            font-size: 1rem;
+                            font-weight: 400;
+                        }
+                    }
+                }
+                .time {
+                    background-color: #d1c4e9;
+                    margin-left: 1rem;
+                    i {
+                        color: #7e57c2;
+                        width: 2.5rem;
+                        height: 2.5rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 50%;
+                        font-size: 2rem;
+                    }
+                    .time-detail {
+                        padding-left: 1.25rem;
+                        h5 {
+                            color: #7e57c2;
+                            margin-bottom: 0rem;
+                            font-size: 1.3rem;
+                            font-weight: 400;
+                        }
+                        span {
+                            color: var(--color-white);
+                            font-size: 1rem;
+                            font-weight: 400;
+                        }
+                    }
+                }
+                .button-area {
+                    margin-top: 4rem;
+                    .button {
+                        @include button;
+                        color: var(--color-gray-2);
+                        border-color: var(--color-gray-2);
+                        &::before,
+                        &::after {
+                            border-color: var(--color-gray-2);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.appoinment {
+    min-height: 40vh;
+    width: 100%;
+    margin-top: 2rem;
+    position: relative;
+    z-index: 1;
+    &:before {
+        content: "";
+        background-color: rgba(0, 0, 0, 0.637);
+        height: 100%;
+        width: 100%;
+        display: block;
+        position: absolute;
+        z-index: -1;
+    }
+    .heading {
+        background-color: var(--color-white);
+        display: inline-block;
+        padding: 1.3rem;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+
+        h3 {
+            display: inline-block;
+            font-size: 2rem;
+            color: var(--color-gray-text);
+        }
+    }
+    .form {
+        background-color: var(--color-white);
+        padding: 2.5rem;
+
+        form {
+            .bootstrap-datetimepicker-widget table th {
+                height: 45px;
+            }
+            .form-control {
+                padding: 1rem;
+                border: 1px solid #edf0f3;
+                &:focus {
+                    box-shadow: none;
+                }
+            }
+            button {
+                padding: 1rem 3rem;
+                background-color: var(--color-light-blue);
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+.blog {
+    padding: 3rem 0rem 3rem 0rem;
+    position: relative;
+    background-color: #ffffff;
+    .title {
+        h6 {
+            @include h6;
+        }
+        h3 {
+            @include h3;
+        }
+    }
+    .blog-area {
+        margin-top: 3rem;
+        .swiper {
+            @include swiper;
+            .swiper-slide {
+                background-color: transparent;
+                &:hover {
+                    span {
+                        margin-right: 1rem;
+                    }
+                }
+            }
+            .card {
+                box-shadow: 2px 8px 30px rgba(35, 39, 86, 0.05);
+                border: none;
+                .img-wrapper {
+                    position: relative;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        bottom: -14px;
+                        left: 0;
+                        right: 0;
+                        top: 26%;
+                        background: linear-gradient(0.45deg, white 12%, rgba(255, 255, 255, 0) 89.88%);
+                        pointer-events: none;
+                    }
+                    img {
+                        max-width: 30rem;
+                        object-fit: cover;
+                    }
+                }
+                .card-body {
+                    text-align: left;
+                    padding: 3rem 2rem;
+                    height: 15rem;
+                    .card-title {
+                        a {
+                            color: var(--color-light-blue);
+                            font-weight: 500;
+                            font-size: 1.4rem;
+                            margin-bottom: 1rem;
+                        }
+                    }
+                    p {
+                        font-size: 1rem;
+                        font-weight: 300;
+                        color: var(--color-black);
+                    }
+                    .button-area {
+                        margin-top: 1rem;
+                        .button {
+                            color: var(--color-light-blue);
+                            font-size: 1rem;
+                            span {
+                                transition: 0.3s all;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .swiper-button-next,
+        .swiper-rtl .swiper-button-prev {
+            top: 2rem;
+            color: var(--color-gray-text);
+        }
+        .swiper-button-prev,
+        .swiper-rtl .swiper-button-next {
+            top: 2rem;
+            left: auto;
+            right: 3rem;
+            color: var(--color-gray-text);
         }
     }
 }
