@@ -18,7 +18,10 @@ var swiper = new Swiper(".mySwiper", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     }, */
-
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
     // Enable debugger
     debugger: true,
 
@@ -28,6 +31,10 @@ var swiper2 = new Swiper(".swiper.mySwiperServices", {
     navigation: {
         nextEl: '.modal-swiper-button-next',
         prevEl: '.modal-swiper-button-prev',
+    },
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
     },
 
     // Enable debugger
@@ -41,6 +48,10 @@ var slider3 = new Swiper('.swiper.mySwiperBlog', {
         nextEl: '.modal-swiper-button-next2',
         prevEl: '.modal-swiper-button-prev2',
     },
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
     breakpoints: {
         640: {
             slidesPerView: 2,
@@ -57,32 +68,64 @@ var slider3 = new Swiper('.swiper.mySwiperBlog', {
     },
 });
 
-/* var swiper = new Swiper(".mySwiperBlog", {
+
+
+var swiper = new Swiper(".mySwiperComments", {
     slidesPerView: 1,
-    spaceBetween: 10,
-    // Enable debugger
-    debugger: true,
-
-    breakpoints: {
-        640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-        },
-        768: {
-            slidesPerView: 4,
-            spaceBetween: 40,
-        },
-        1024: {
-            slidesPerView: 3,
-            spaceBetween: 50,
-        },
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
     },
+
 });
- */
+
+var swiper = new Swiper(".mySwiperDoctors", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+  });
 $(function () {
 
     $('#datetimepicker2').datetimepicker({
         format: 'DD-MM-YYYY'
     });
 
+});
+
+const acc = document.getElementsByClassName("accordion");
+let i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+        const panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+            panel.classList.remove("open");
+            this.setAttribute('aria-expanded', "false")
+        } else {
+            let active = document.querySelectorAll(".accordion.active");
+            for (let j = 0; j < active.length; j++) {
+                active[j].classList.remove("active");
+                active[j].setAttribute('aria-expanded', "false")
+                active[j].nextElementSibling.style.maxHeight = null;
+                active[j].nextElementSibling.classList.remove("open");
+            }
+            panel.style.maxHeight = panel.scrollHeight + "px";
+            panel.classList.add("open");
+            this.setAttribute('aria-expanded', "true")
+        }
+        this.classList.toggle("active");
+
+    });
+}
+
+$(window).load(function () {
+    $("#before_after").twentytwenty();
+});
+$(window).load(function () {
+    $("#before_after2").twentytwenty();
+});
+$(window).load(function () {
+    $("#before_after3").twentytwenty();
 });

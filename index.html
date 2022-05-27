@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel='stylesheet' href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/124874/twentytwenty.css'>
     <link rel='stylesheet' href='https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css'>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
@@ -212,7 +213,7 @@
         </div>
     </section>
     <section class="services">
-      <!--   <div class="container">
+        <!--   <div class="container">
             <div class="row">
                 <div class="title d-flex justify-content-between align-items-center">
                     <div>
@@ -378,11 +379,18 @@
 
     <section class="blog">
         <div class="container position-relative">
-            <div class="title">
-                <h6>Blog</h6>
-                <h3>
-                    Güncel Blog Yazılarımız
-                </h3>
+            <div class="title d-flex justify-content-between align-items-center">
+                <div>
+                    <h6>Blog</h6>
+                    <h3>
+                        Güncel Blog Yazılarımız
+                    </h3>
+                </div>
+                <div class="button-area">
+                    <a href="" class="button">
+                        Daha Fazlası
+                    </a>
+                </div>
             </div>
             <div class="blog-area">
                 <div class="swiper mySwiperBlog">
@@ -474,33 +482,313 @@
     <section class="appoinment d-flex align-items-center justify-content-center" style="background-image: url(./img/parallax-3.jpg); background-size: cover; background-position: center; background-repeat: no-repeat;">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
-                    <div class="heading">
-                        <h3>Randevu Al</h3>
+                <div class="col-lg-6">
+                    <div class="title">
+                        <h6>Uzmana</h6>
+                        <h3>
+                            Danışın
+                        </h3>
                     </div>
                     <div class="form">
                         <form>
                             <div class="row">
-                                <div class="col-lg-3">
+                                <div class="col-lg-6 mb-4">
                                     <div>
                                         <input type="text" class="form-control" placeholder="İsim Soyisim">
                                     </div>
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-lg-6 mb-4">
                                     <div>
                                         <input type="text" class="form-control" placeholder="Telefon">
                                     </div>
                                 </div>
-                                <div class="col-lg-3">
+                                <!--  <div class="col-lg-6 mb-3">
                                     <div>
-                                        <input type="email" class="form-control" placeholder="Tarih" id="datetimepicker2">
+                                        <input type="text" class="form-control" placeholder="Tarih" id="datetimepicker2">
+                                    </div>
+                                </div> -->
+                                <div class="col-lg-6 mb-4">
+                                    <div>
+                                        <input type="text" class="form-control" placeholder="Soru Başlığı">
                                     </div>
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-lg-6 mb-4">
+                                    <div>
+                                        <input type="email" class="form-control" placeholder="E - Mail">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 mb-4">
+                                    <textarea class="form-control" placeholder="Mesaj Yazın" rows="5"></textarea>
+
+                                </div>
+                                <div class="col-lg-12">
                                     <button type="submit" class="btn btn-primary">GÖNDER</button>
                                 </div>
                             </div>
                         </form>
+                    </div>
+                </div>
+                <div class="col-lg-6 faq-area">
+                    <div class="title">
+                        <h6>Sık Sorulan</h6>
+                        <h3>
+                            Sorular
+                        </h3>
+                    </div>
+                    <div class="faq">
+                        <button class="accordion d-flex justify-content-between align-items-center active" aria-haspopup="true" aria-expanded="false">
+                            <span id="tab-title-dimensions_tab">Lorem Ipsum</span>
+                            <div class="circle-animation closed">
+                                <div class="horizontal"></div>
+                                <div class="vertical"></div>
+                            </div>
+                        </button>
+                        <div class="panel open">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis voluptates consectetur magnam repellat cumque molestiae accusantium enim eum placeat est?</p>
+                        </div>
+                    </div>
+
+                    <div class="faq">
+                        <button class="accordion d-flex justify-content-between align-items-center" aria-haspopup="true" aria-expanded="false">
+                            <span id="tab-title-dimensions_tab">Lorem Ipsum</span>
+                            <div class="circle-animation closed">
+                                <div class="horizontal"></div>
+                                <div class="vertical"></div>
+                            </div>
+                        </button>
+                        <div class="panel">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque facilis minus deserunt, consectetur ipsam omnis nemo dignissimos enim totam nisi?</p>
+                        </div>
+                    </div>
+
+                    <div class="faq">
+                        <button class="accordion d-flex justify-content-between align-items-center" aria-haspopup="true" aria-expanded="false">
+                            <span id="tab-title-dimensions_tab">Lorem Ipsum</span>
+                            <div class="circle-animation closed">
+                                <div class="horizontal"></div>
+                                <div class="vertical"></div>
+                            </div>
+                        </button>
+                        <div class="panel">
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim optio numquam, quibusdam dolor sapiente velit libero assumenda voluptates quam fugit?</p>
+                        </div>
+                    </div>
+
+                    <div class="faq">
+                        <button class="accordion d-flex justify-content-between align-items-center" aria-haspopup="true" aria-expanded="false">
+                            <span id="tab-title-dimensions_tab">Lorem Ipsum</span>
+                            <div class="circle-animation closed">
+                                <div class="horizontal"></div>
+                                <div class="vertical"></div>
+                            </div>
+                        </button>
+                        <div class="panel">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, sed voluptatum! Ipsa, minus. Et eligendi ex, hic dolor rerum harum!</p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="before-after">
+        <div class="container">
+            <div class="row">
+                <div class="title d-flex justify-content-between align-items-center">
+                    <div>
+                        <h6>Öncesi - Sonrası </h6>
+                        <h3>
+                            Gülüşünüzde Fark Yaratın
+                        </h3>
+                    </div>
+                    <div class="button-area">
+                        <a href="" class="button">
+                            Devamını Gör
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div id="before_after">
+                        <img src="./img/before.jpg" class="img-fluid">
+                        <img src="./img/after.jpg" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa nostrum repellendus atque blanditiis saepe velit eveniet, rerum sit fugit libero nesciunt quos omnis quasi molestiae distinctio. Unde optio quam quidem nam atque iure labore harum. Nemo, at modi ratione fugit enim dolorum eligendi delectus perspiciatis praesentium dignissimos, ducimus nulla numquam sed similique, eaque dicta distinctio. Cum molestiae, at numquam culpa quo impedit voluptatibus cumque autem explicabo saepe. Commodi, rerum? Est aperiam, ducimus velit, fuga dolores, nisi exercitationem accusamus tempora quos cum asperiores! Incidunt, pariatur praesentium quis quaerat quisquam eos voluptatibus, molestias sapiente, non voluptates veniam blanditiis explicabo? Facere, doloribus tempore!</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="doctors">
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="col-lg-7">
+                    <div class="swiper mySwiperDoctors">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="card ">
+                                    <div class="img-wrapper d-flex justify-content-center">
+                                        <img src="./img/yasin-akgul.jpg.png" class="card-img-top" alt="..." style="max-width: 7rem; border-radius: 50%;">
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <div class="img-wrapper d-flex justify-content-center">
+                                        <img src="./img/yasin-akgul.jpg.png" class="card-img-top" alt="..." style="max-width: 7rem; border-radius: 50%;">
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <div class="img-wrapper d-flex justify-content-center">
+                                        <img src="./img/yasin-akgul.jpg.png" class="card-img-top" alt="..." style="max-width: 7rem; border-radius: 50%;">
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="title d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6>Smile Design House </h6>
+                            <h3>
+                                Yaratıcı Ekibimiz
+                            </h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur atque fugit velit hic nostrum, voluptates cumque asperiores aut et dolor.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="social-and-comments">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 social">
+                    <h6>Bizi Takip Edin </h6>
+                    <h3>Sosyal Medya Hesaplarımız</h3>
+
+                    <ul class="d-flex social-media">
+                        <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-linkedin-in"></i></a></li>
+                    </ul>
+                    <div class="rwd-media">
+                        <iframe src="https://www.youtube.com/embed/97wGRcShzu8" width="448" height="252" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                    </div>
+                </div>
+                <div class="col-lg-6 comments">
+                    <h6>Bizi Takip Edin </h6>
+                    <h3>Memnuniyet Yorumları</h3>
+                    <div class="swiper mySwiperComments">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="comment-box h-100 w-100">
+                                    <div class="icon-box">
+                                        <i class="fa-solid fa-quote-left"></i>
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-between h-100">
+                                        <div>
+                                            <div class="d-flex align-items-start justify-content-start">
+                                                <img src="./img/user.png" class="img-fluid" alt="" style="max-width: 5rem;">
+                                                <div class="mt-1 user-info">
+                                                    <h4 style="margin-top: 0.5rem;">Lorem Ipsum</h4>
+                                                    <span>Lorem</span>
+                                                </div>
+                                            </div>
+                                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium rerum vero ipsam assumenda quidem sunt velit aspernatur! Consectetur omnis sapiente exercitationem explicabo corporis temporibus tenetur, veritatis sequi cupiditate laudantium in perferendis, maxime molestiae dolorem magni possimus libero eaque pariatur voluptates.</p>
+                                        </div>
+                                        <a href="">Devamını Oku <i class="fa-solid fa-chevron-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="comment-box h-100 w-100">
+                                    <div class="icon-box">
+                                        <i class="fa-solid fa-quote-left"></i>
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-between h-100">
+                                        <div>
+                                            <div class="d-flex align-items-start justify-content-start">
+                                                <img src="./img/user.png" class="img-fluid" alt="" style="max-width: 5rem;">
+                                                <div class="mt-1 user-info">
+                                                    <h4 style="margin-top: 0.5rem;">Lorem Ipsum</h4>
+                                                    <span>Lorem</span>
+                                                </div>
+                                            </div>
+                                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium rerum vero ipsam assumenda quidem sunt velit aspernatur! Consectetur omnis sapiente exercitationem explicabo corporis temporibus tenetur, veritatis sequi cupiditate laudantium in perferendis, maxime molestiae dolorem magni possimus libero eaque pariatur voluptates.</p>
+                                        </div>
+                                        <a href="">Devamını Oku <i class="fa-solid fa-chevron-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="comment-box h-100 w-100">
+                                    <div class="icon-box">
+                                        <i class="fa-solid fa-quote-left"></i>
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-between h-100">
+                                        <div>
+                                            <div class="d-flex align-items-start justify-content-start">
+                                                <img src="./img/user.png" class="img-fluid" alt="" style="max-width: 5rem;">
+                                                <div class="mt-1 user-info">
+                                                    <h4 style="margin-top: 0.5rem;">Lorem Ipsum</h4>
+                                                    <span>Lorem</span>
+                                                </div>
+                                            </div>
+                                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium rerum vero ipsam assumenda quidem sunt velit aspernatur! Consectetur omnis sapiente exercitationem explicabo corporis temporibus tenetur, veritatis sequi cupiditate laudantium in perferendis, maxime molestiae dolorem magni possimus libero eaque pariatur voluptates.</p>
+                                        </div>
+                                        <a href="">Devamını Oku <i class="fa-solid fa-chevron-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="comment-box h-100 w-100">
+                                    <div class="icon-box">
+                                        <i class="fa-solid fa-quote-left"></i>
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-between h-100">
+                                        <div>
+                                            <div class="d-flex align-items-start justify-content-start">
+                                                <img src="./img/user.png" class="img-fluid" alt="" style="max-width: 5rem;">
+                                                <div class="mt-1 user-info">
+                                                    <h4 style="margin-top: 0.5rem;">Lorem Ipsum</h4>
+                                                    <span>Lorem</span>
+                                                </div>
+                                            </div>
+                                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium rerum vero ipsam assumenda quidem sunt velit aspernatur! Consectetur omnis sapiente exercitationem explicabo corporis temporibus tenetur, veritatis sequi cupiditate laudantium in perferendis, maxime molestiae dolorem magni possimus libero eaque pariatur voluptates.</p>
+                                        </div>
+                                        <a href="">Devamını Oku <i class="fa-solid fa-chevron-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -508,9 +796,91 @@
     </section>
 
 
-    <section style="min-height: 50vh;">
+    <footer style="background-image: url(./img/full-equiped-medical-cabinet.jpg); background-position:center; background-size: cover;">
+        <div class="container">
+            <div class="test">
+                <div class="col-area">
+                    <h3>KURUMSAL</h3>
+                    <ul>
+                        <li><a href=""><i class="fa-solid fa-chevron-right"></i>Lorem</a></li>
+                        <li><a href=""><i class="fa-solid fa-chevron-right"></i>Lorem - Ipsum Dolor</a></li>
+                        <li><a href=""><i class="fa-solid fa-chevron-right"></i>Lorem - Ipsum Dolor</a></li>
+                        <li><a href=""><i class="fa-solid fa-chevron-right"></i>Lorem Ipsum</a></li>
+                        <li><a href=""><i class="fa-solid fa-chevron-right"></i>Lorem</a></li>
+                        <li><a href=""><i class="fa-solid fa-chevron-right"></i>Lorem Ipsum</a></li>
+                        <li><a href=""><i class="fa-solid fa-chevron-right"></i>Lorem Ipsum</a></li>
+                        <li><a href=""><i class="fa-solid fa-chevron-right"></i>Lorem</a></li>
+                    </ul>
+                </div>
+                <div class="col-area">
+                    <h3>FAYDALI LİNKLER</h3>
+                    <ul>
+                        <li><a href=""><i class="fa-solid fa-chevron-right"></i>Lorem</a></li>
+                        <li><a href=""><i class="fa-solid fa-chevron-right"></i>Lorem - Ipsum Dolor</a></li>
+                        <li><a href=""><i class="fa-solid fa-chevron-right"></i>Lorem - Ipsum Dolor</a></li>
+                        <li><a href=""><i class="fa-solid fa-chevron-right"></i>Lorem Ipsum</a></li>
+                        <li><a href=""><i class="fa-solid fa-chevron-right"></i>Lorem</a></li>
+                        <li><a href=""><i class="fa-solid fa-chevron-right"></i>Lorem Ipsum</a></li>
+                        <li><a href=""><i class="fa-solid fa-chevron-right"></i>Lorem Ipsum</a></li>
+                        <li><a href=""><i class="fa-solid fa-chevron-right"></i>Lorem</a></li>
+                    </ul>
+                </div>
+                <div class="col-area">
+                    <h3>ONLINE</h3>
+                    <ul>
+                        <li><a href=""><i class="fa-solid fa-chevron-right"></i>Lorem</a></li>
+                        <li><a href=""><i class="fa-solid fa-chevron-right"></i>Lorem - Ipsum Dolor</a></li>
+                        <li><a href=""><i class="fa-solid fa-chevron-right"></i>Lorem - Ipsum Dolor</a></li>
+                        <li><a href=""><i class="fa-solid fa-chevron-right"></i>Lorem Ipsum</a></li>
+                        <li><a href=""><i class="fa-solid fa-chevron-right"></i>Lorem</a></li>
+                        <li><a href=""><i class="fa-solid fa-chevron-right"></i>Lorem Ipsum</a></li>
+                        <li><a href=""><i class="fa-solid fa-chevron-right"></i>Lorem Ipsum</a></li>
+                        <li><a href=""><i class="fa-solid fa-chevron-right"></i>Lorem</a></li>
+                    </ul>
+                </div>
+                <div class="col-area">
+                    <h3>TEDAVİLERİMİZ</h3>
+                    <ul>
+                        <li><a href=""><i class="fa-solid fa-chevron-right"></i>Lorem</a></li>
+                        <li><a href=""><i class="fa-solid fa-chevron-right"></i>Lorem - Ipsum Dolor</a></li>
+                        <li><a href=""><i class="fa-solid fa-chevron-right"></i>Lorem - Ipsum Dolor</a></li>
+                        <li><a href=""><i class="fa-solid fa-chevron-right"></i>Lorem Ipsum</a></li>
+                        <li><a href=""><i class="fa-solid fa-chevron-right"></i>Lorem</a></li>
+                        <li><a href=""><i class="fa-solid fa-chevron-right"></i>Lorem Ipsum</a></li>
+                        <li><a href=""><i class="fa-solid fa-chevron-right"></i>Lorem Ipsum</a></li>
+                        <li><a href=""><i class="fa-solid fa-chevron-right"></i>Lorem</a></li>
+                    </ul>
+                </div>
+                <div class="col-area">
+                    <div class="col-area">
+                        <a href="">
+                            <img src="./img/logo.png" class="img-fluid" alt="">
+                        </a>
+                        <p>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, soluta?
+                        </p>
+                        <ul class="contact">
+                            <li><a href=""><i class="fa-solid fa-phone"></i>466 66 00 </a></li>
+                            <li><a href=""><i class="fa-solid fa-envelope"></i>info@smiledesignhouse.com </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-    </section>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center">
+                    <span>Copyright © 2022 Smile Design House</span>
+                    <a href="">
+                        <img src="./img/wucize.png" class="img-fluid" alt="wucize">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
 
 
 
@@ -520,6 +890,9 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js'></script>
     <script src='https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js'></script>
+
+    <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/124874/jquery.event.move.js'></script>
+    <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/124874/jquery.twentytwenty.js'></script>
     <script src="./js/script.js"></script>
 </body>
 
