@@ -2385,16 +2385,13 @@ header .header-inner .header-area .menu-area ul li a.active {
 }
 
 .our-partners .content .brand {
-  padding: 0.5rem;
+  padding: 0.8rem;
   border: 3px solid var(--color-light-blue);
-  border-right-color: var(--color-white);
-  border-left-color: var(--color-white);
   position: relative;
 }
 
 .our-partners .content img {
-  height: 10rem;
-  width: 100%;
+  max-width: 10rem;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -2471,6 +2468,82 @@ header .header-inner .header-area .menu-area ul li a.active {
 
 @media screen and (max-width: 991px) {
   .human-resources .content p {
+    font-size: 0.9rem;
+  }
+}
+
+.kvkk {
+  padding: 5rem 2rem;
+  position: relative;
+}
+
+@media screen and (max-width: 991px) {
+  .kvkk {
+    padding: 2rem 1rem;
+  }
+}
+
+.kvkk .sidebar {
+  -webkit-box-shadow: 3px 7px 23px -8px rgba(0, 0, 0, 0.42);
+          box-shadow: 3px 7px 23px -8px rgba(0, 0, 0, 0.42);
+  /*   height: 100%; */
+  padding: 4rem 2rem;
+  background-color: var(--color-light-blue);
+}
+
+.kvkk .sidebar ul li {
+  margin-bottom: 1rem;
+}
+
+.kvkk .sidebar ul li a {
+  color: var(--color-white);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.kvkk .sidebar ul li a.active {
+  font-weight: 900;
+}
+
+@media screen and (max-width: 991px) {
+  .kvkk .sidebar ul li a {
+    font-size: 1rem;
+  }
+}
+
+.kvkk .content {
+  padding-left: 1rem;
+}
+
+@media screen and (max-width: 991px) {
+  .kvkk .content {
+    padding-left: 0rem;
+    margin-top: 2rem;
+  }
+}
+
+.kvkk .content h2,
+.kvkk .content h3 {
+  color: var(--color-light-blue);
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .kvkk .content h2,
+  .kvkk .content h3 {
+    font-size: 1.5rem;
+  }
+}
+
+.kvkk .content p {
+  color: var(--color-gray-text);
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 991px) {
+  .kvkk .content p {
     font-size: 0.9rem;
   }
 }

@@ -1676,23 +1676,51 @@ header {
             margin-top: 2rem;
         }
         .brand{
-            padding: 0.5rem;
+            padding: 0.8rem;
             border: 3px solid var(--color-light-blue);
-            border-right-color: var(--color-white);
-            border-left-color: var(--color-white);
+          
             position: relative;
             
           
         }
         img {
-            height: 10rem;
-            width: 100%;
+            max-width: 10rem;
             object-fit: contain;
         }
     }
 }
 
 .human-resources{
+    padding: 5rem 2rem;
+    position: relative;
+    @media screen and(max-width:$lg-breakpoint) {
+        padding: 2rem 1rem;
+    }
+    .sidebar {
+        @include sidebar;
+    }
+    .content {
+        padding-left: 1rem;
+        @media screen and(max-width:$lg-breakpoint) {
+            padding-left: 0rem;
+            margin-top: 2rem;
+        }
+        h2,
+        h3 {
+            @include h3;
+        }
+        p {
+            color: var(--color-gray-text);
+            font-weight: 400;
+            font-size: 1rem;
+            @media screen and(max-width:$lg-breakpoint) {
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+
+.kvkk{
     padding: 5rem 2rem;
     position: relative;
     @media screen and(max-width:$lg-breakpoint) {
