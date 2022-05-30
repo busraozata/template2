@@ -14,10 +14,10 @@ window.addEventListener("scroll", function () {
 
 var swiper = new Swiper(".mySwiper", {
     effect: "fade",
-    /* navigation: {
+    navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
-    }, */
+    },
     autoplay: {
         delay: 2500,
         disableOnInteraction: false,
@@ -54,17 +54,22 @@ var slider3 = new Swiper('.swiper.mySwiperBlog', {
     },
     breakpoints: {
         640: {
-            slidesPerView: 2,
+            slidesPerView: 1,
             spaceBetween: 20,
         },
         768: {
-            slidesPerView: 4,
+            slidesPerView: 2,
             spaceBetween: 40,
         },
         1024: {
+            slidesPerView: 2,
+            spaceBetween: 50,
+        },
+        1200: {
             slidesPerView: 3,
             spaceBetween: 50,
         },
+        
     },
 });
 
@@ -90,15 +95,15 @@ var swiper = new Swiper(".mySwiperDoctors", {
     },
     breakpoints: {
       640: {
-        slidesPerView: 2,
+        slidesPerView: 1,
         spaceBetween: 20,
       },
       768: {
-        slidesPerView: 4,
+        slidesPerView: 2,
         spaceBetween: 40,
       },
       1024: {
-        slidesPerView: 4,
+        slidesPerView: 3,
         spaceBetween: 50,
       },
     },
@@ -147,4 +152,18 @@ $(window).load(function () {
 });
 $(window).load(function () {
     $("#before_after3").twentytwenty();
+});
+
+// Fancybox Config
+$('[data-fancybox="gallery"]').fancybox({
+    buttons: [
+        "slideShow",
+        "thumbs",
+        "zoom",
+        "fullScreen",
+        "share",
+        "close"
+    ],
+    loop: false,
+    protect: true
 });
