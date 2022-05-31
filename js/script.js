@@ -1,3 +1,6 @@
+$(".twentytwenty-container").twentytwenty({default_offset_pct: 0.5});
+
+
 const hamburgerMenu = document.querySelector('.hamburger');
 const menuArea = document.querySelector('.menu-area')
 const menuIsActive = () => {
@@ -69,7 +72,7 @@ var slider3 = new Swiper('.swiper.mySwiperBlog', {
             slidesPerView: 3,
             spaceBetween: 50,
         },
-        
+
     },
 });
 
@@ -94,29 +97,29 @@ var swiper = new Swiper(".mySwiperDoctors", {
         disableOnInteraction: false,
     },
     breakpoints: {
-      640: {
-        slidesPerView: 1,
-        spaceBetween: 20,
-      },
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 40,
-      },
-      1024: {
-        slidesPerView: 3,
-        spaceBetween: 50,
-      },
+        640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+        },
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+        },
     },
 });
 
-$(function () {
+/* $(function () {
 
     $('#datetimepicker2').datetimepicker({
         format: 'DD-MM-YYYY'
     });
 
 });
-
+ */
 const acc = document.getElementsByClassName("accordion");
 let i;
 
@@ -144,13 +147,13 @@ for (i = 0; i < acc.length; i++) {
     });
 }
 
-$(window).load(function () {
+$(this).load(function () {
     $("#before_after").twentytwenty();
 });
-$(window).load(function () {
+$(this).load(function () {
     $("#before_after2").twentytwenty();
 });
-$(window).load(function () {
+$(this).load(function () {
     $("#before_after3").twentytwenty();
 });
 
@@ -167,3 +170,8 @@ $('[data-fancybox="gallery"]').fancybox({
     loop: false,
     protect: true
 });
+
+
+$(".twentytwenty-container").twentytwenty({default_offset_pct: 0.5});
+
+
