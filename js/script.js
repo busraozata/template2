@@ -112,6 +112,30 @@ var swiper = new Swiper(".mySwiperDoctors", {
     },
 });
 
+var swiper = new Swiper(".mySwiperLastPosts", {
+    direction: 'vertical',
+    slidesPerView: 3,
+    spaceBetween: 5,
+    loop: true,
+    autoplay: {
+      delay: 1500,
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 3,
+        spaceBetween: 5,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+      },
+    },
+  });
+
 /* $(function () {
 
     $('#datetimepicker2').datetimepicker({
@@ -172,6 +196,6 @@ $('[data-fancybox="gallery"]').fancybox({
 });
 
 
-$(".twentytwenty-container").twentytwenty({default_offset_pct: 0.5});
+
 
 
