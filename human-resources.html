@@ -60,48 +60,64 @@
                     </button>
                     <div class="menu-area ">
                         <a class="navbar-brand d-lg-none d-block" href="index.html"><img src="./img/logo.png" class="img-fluid" alt="logo"></a>
-                        <ul class="d-flex align-items-center justify-content-center">
+                        <ul class="menu d-flex align-items-center justify-content-center">
                             <li class="nav-item">
-                                <a class="nav-link active" href="index.html">Ana Sayfa</a>
+                                <a class="nav-link " href="index.html">Ana Sayfa</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="about-us.html">Kurumsal</a>
+                                <a class="nav-link active" href="about-us.html" id="defaultDropdown">Kurumsal</a>
+                                <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-angle-right"></i>Hakkımızda</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-angle-right"></i>Neden Biz</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-angle-right"></i>Polikliniğimiz</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-angle-right"></i>İnsan Kaynakları</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-angle-right"></i>KVKK</a></li>
+                                </ul>
                             </li>
 
-                            <li class="nav-item dropdown">
-                                <a href="services.html" class="nav-link">
+                            <li class="nav-item">
+                                <a class="nav-link " href="services.html" id="defaultDropdown">
                                     Tedavilerimiz
                                 </a>
-                                <!--   <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul> -->
+
+                                <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-angle-right"></i>Öncesi & Sonrası</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-angle-right"></i>İmplant Diş</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-angle-right"></i>Ortodonti</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-angle-right"></i>Diş Beyazlatma </a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-angle-right"></i>Diş Temizliği </a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-angle-right"></i>Sterilizasyon </a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-angle-right"></i>Porcelen Diş Teli </a></li>
+
+                                </ul>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a href="doctors.html" class="nav-link">
+                            <li class="nav-item">
+                                <a class="nav-link" href="doctors.html" id="defaultDropdown">
                                     Hekimlerimiz
                                 </a>
-                                <!--   <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul> -->
+                                <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-angle-right"></i>Lorem Ipsum</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-angle-right"></i>Lorem Ipsum</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-angle-right"></i>Lorem Ipsum</a></li>
+                                </ul>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="blog.html">Blog</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="before-after.html">Öncesi & Sonrası</a>
-                            </li>
+
                             <li class="nav-item">
                                 <a class="nav-link" href="contact-us.html">İletişim</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="appoinment.html">Randevu Al</a>
+                            </li>
+                        </ul>
+                        <ul class="language-area-mobil d-flex d-lg-none">
+                            <li>
+                                <a type="button" href="">EN</a>
+                            </li>
+                            <li>
+                                <a type="button" href="">TR</a>
                             </li>
                         </ul>
                     </div>
@@ -111,13 +127,14 @@
         </div>
     </header>
 
+
     <section class="sub-banner d-flex align-items-center justify-content-center" style="background: url(./img/interior-empty-modern-stomatology-orthodontic-hospital-bright-office.jpg); background-repeat: no-repeat; background-size: cover; background-position: center;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <h1>İnsan Kaynakları</h1>
                     <div class="d-flex align-items-center justify-content-start">
-                        <a href="index.html">Ana Sayfa</a> <i class="fa-solid fa-chevron-right"></i> <a href="about-us.html">İnsan Kaynakları</a>
+                        <a href="index.html">Ana Sayfa</a> <i class="fa-solid fa-chevron-right"></i> <a href="human-resources.html">İnsan Kaynakları</a>
                     </div>
                 </div>
             </div>
@@ -149,21 +166,61 @@
         </div>
     </section>
 
-    
-    <section class="parallax d-flex justify-content-center" style="background: url(./img/full-equiped-medical-cabinet.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;">
+    <section class="appoinment d-flex align-items-center justify-content-center" style="background: url(./img/full-equiped-medical-cabinet.jpg); background-position: center; background-repeat: no-repeat; background-size: cover; background-attachment: fixed;">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3">
-                    <a href="contact-us.html"><i class="fa-solid fa-circle-info"></i> Bize Sorun</a>
+                <div class="col-lg-6">
+                    <div class="title">
+                        <h6>Bize</h6>
+                        <h3>
+                            Başvurun
+                        </h3>
+                    </div>
+                    <div class="form">
+                        <form>
+                            <div class="row">
+                                <div class="col-lg-6 mb-4">
+                                    <div>
+                                        <input type="text" class="form-control" placeholder="İsim Soyisim">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-4">
+                                    <div>
+                                        <input type="text" class="form-control" placeholder="Telefon">
+                                    </div>
+                                </div>
+                                <!--  <div class="col-lg-6 mb-3">
+                                    <div>
+                                        <input type="text" class="form-control" placeholder="Tarih" id="datetimepicker2">
+                                    </div>
+                                </div> -->
+                                <div class="col-lg-6 mb-4">
+                                    <div>
+                                        <input type="text" class="form-control" placeholder="Soru Başlığı">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-4">
+                                    <div>
+                                        <input type="email" class="form-control" placeholder="E - Mail">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 mb-4">
+                                    <textarea class="form-control" placeholder="Mesaj Yazın" rows="5"></textarea>
+
+                                </div>
+                                <div class="col-lg-12 mb-4">
+                                    <button type="submit" class="btn btn-primary">GÖNDER</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                <div class="col-lg-3">
-                    <a href="" ><i class="fa-solid fa-calendar-check"></i>Randevu Al</a>
-                </div>
-                <div class="col-lg-3">
-                    <a href="" class="button"><i class="fa-solid fa-tooth"></i>Tedavilerimiz</a>
-                </div>
-                <div class="col-lg-3">
-                    <a href="before-after.html"><i class="fa-solid fa-face-grin-beam"></i>  Öncesi & Sonrası</a>
+                <div class="col-lg-6 ">
+
+                    <div class="img-wrapper">
+                        <img src="./img/woman-patient-dentist.jpg" class="img-fluid" alt="">
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -180,7 +237,7 @@
                         </h3>
                     </div>
                     <div class="button-area">
-                        <a href="" class="button">
+                        <a href="doctors.html" class="button">
                             Devamını Gör
                         </a>
                     </div>
@@ -194,7 +251,7 @@
                                         <a href="doctor-detail.html">
                                             <img src="./img/doctor.jpeg" class="card-img-top" alt="...">
                                         </a>
-                                        <a href="">
+                                        <a href="doctor-detail.html">
                                             <div class="overlay">
                                                 <i class="fa-solid fa-link"></i>
                                             </div>
@@ -214,7 +271,7 @@
                                         <a href="doctor-detail.html">
                                             <img src="./img/doctor-2.jpeg" class="card-img-top" alt="...">
                                         </a>
-                                        <a href="">
+                                        <a href="doctor-detail.html">
                                             <div class="overlay">
                                                 <i class="fa-solid fa-link"></i>
                                             </div>
@@ -234,7 +291,7 @@
                                         <a href="doctor-detail.html">
                                             <img src="./img/doctor-3.jpeg" class="card-img-top" alt="...">
                                         </a>
-                                        <a href="">
+                                        <a href="doctor-detail.html">
                                             <div class="overlay">
                                                 <i class="fa-solid fa-link"></i>
                                             </div>
@@ -254,7 +311,7 @@
                                         <a href="doctor-detail.html">
                                             <img src="./img/doctor-4.jpeg" class="card-img-top" alt="...">
                                         </a>
-                                        <a href="">
+                                        <a href="doctor-detail.html">
                                             <div class="overlay">
                                                 <i class="fa-solid fa-link"></i>
                                             </div>

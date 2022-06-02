@@ -60,48 +60,64 @@
                     </button>
                     <div class="menu-area ">
                         <a class="navbar-brand d-lg-none d-block" href="index.html"><img src="./img/logo.png" class="img-fluid" alt="logo"></a>
-                        <ul class="d-flex align-items-center justify-content-center">
+                        <ul class="menu d-flex align-items-center justify-content-center">
                             <li class="nav-item">
-                                <a class="nav-link active" href="index.html">Ana Sayfa</a>
+                                <a class="nav-link " href="index.html">Ana Sayfa</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="about-us.html">Kurumsal</a>
+                                <a class="nav-link " href="about-us.html" id="defaultDropdown">Kurumsal</a>
+                                <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-angle-right"></i>Hakkımızda</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-angle-right"></i>Neden Biz</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-angle-right"></i>Polikliniğimiz</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-angle-right"></i>İnsan Kaynakları</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-angle-right"></i>KVKK</a></li>
+                                </ul>
                             </li>
 
-                            <li class="nav-item dropdown">
-                                <a href="services.html" class="nav-link">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="services.html" id="defaultDropdown">
                                     Tedavilerimiz
                                 </a>
-                                <!--   <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul> -->
+
+                                <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-angle-right"></i>Öncesi & Sonrası</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-angle-right"></i>İmplant Diş</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-angle-right"></i>Ortodonti</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-angle-right"></i>Diş Beyazlatma </a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-angle-right"></i>Diş Temizliği </a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-angle-right"></i>Sterilizasyon </a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-angle-right"></i>Porcelen Diş Teli </a></li>
+
+                                </ul>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a href="doctors.html" class="nav-link">
+                            <li class="nav-item">
+                                <a class="nav-link" href="doctors.html" id="defaultDropdown">
                                     Hekimlerimiz
                                 </a>
-                                <!--   <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul> -->
+                                <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-angle-right"></i>Lorem Ipsum</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-angle-right"></i>Lorem Ipsum</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-angle-right"></i>Lorem Ipsum</a></li>
+                                </ul>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="blog.html">Blog</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="before-after.html">Öncesi & Sonrası</a>
-                            </li>
+
                             <li class="nav-item">
                                 <a class="nav-link" href="contact-us.html">İletişim</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="appoinment.html">Randevu Al</a>
+                            </li>
+                        </ul>
+                        <ul class="language-area-mobil d-flex d-lg-none">
+                            <li>
+                                <a type="button" href="">EN</a>
+                            </li>
+                            <li>
+                                <a type="button" href="">TR</a>
                             </li>
                         </ul>
                     </div>
@@ -117,7 +133,7 @@
                 <div class="col-lg-12">
                     <h1>Diş Dolgusu</h1>
                     <div class="d-flex align-items-center justify-content-start">
-                        <a href="index.html">Ana Sayfa</a> <i class="fa-solid fa-chevron-right"></i> <a href="services.html">Tedavilerimiz</a><i class="fa-solid fa-chevron-right"></i> <a href="services.html">Diş Dolgusu</a>
+                        <a href="index.html">Ana Sayfa</a> <i class="fa-solid fa-chevron-right"></i> <a href="services.html">Tedavilerimiz</a><i class="fa-solid fa-chevron-right"></i> <a href="service-detail.html">Diş Dolgusu</a>
                     </div>
                 </div>
             </div>
@@ -129,24 +145,19 @@
                 <div class="col-xl-3 col-lg-3">
                     <div class="sidebar">
                         <ul>
-                            <li><a href="service-detail.html" class="active">General Dentistry</a></li>
-                            <li><a href="service-detail.html">Cosmetic Dentistry</a></li>
+                            <li><a href="before-after.html">Öncesi & Sonrası </a></li>
+                            <li><a href="service-detail.html" class="active">Ortodonti</a></li>
+                            <li><a href="service-detail.html">Diş Beyazlatma </a></li>
                             <li><a href="service-detail.html">Dental Implants</a></li>
-                            <li><a href="service-detail.html">Orthodontics</a></li>
-                            <li><a href="service-detail.html">Teeth Whitening</a></li>
-                            <li><a href="service-detail.html">Teeth Cleaning</a></li>
-                            <li><a href="service-detail.html">General Dentistry</a></li>
-                            <li><a href="service-detail.html">Cosmetic Dentistry</a></li>
+                            <li><a href="service-detail.html">Diş Temizliği</a></li>
+                            <li><a href="service-detail.html">Sterilizasyon</a></li>
+                            <li><a href="service-detail.html">Porcelen Diş Teli</a></li>
+                            <li><a href="service-detail.html" >Ortodonti</a></li>
+                            <li><a href="service-detail.html">Diş Beyazlatma </a></li>
                             <li><a href="service-detail.html">Dental Implants</a></li>
-                            <li><a href="service-detail.html">Orthodontics</a></li>
-                            <li><a href="service-detail.html">Teeth Whitening</a></li>
-                            <li><a href="service-detail.html">Teeth Cleaning</a></li>
-                            <li><a href="service-detail.html">General Dentistry</a></li>
-                            <li><a href="service-detail.html">Cosmetic Dentistry</a></li>
-                            <li><a href="service-detail.html">Dental Implants</a></li>
-                            <li><a href="service-detail.html">Orthodontics</a></li>
-                            <li><a href="service-detail.html">Teeth Whitening</a></li>
-                            <li><a href="service-detail.html">Teeth Cleaning</a></li>
+                            <li><a href="service-detail.html">Diş Temizliği</a></li>
+                            <li><a href="service-detail.html">Sterilizasyon</a></li>
+                            <li><a href="service-detail.html">Porcelen Diş Teli</a></li>
 
                         </ul>
                     </div>
@@ -160,6 +171,7 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo at officiis repellat ipsum nisi nesciunt voluptate et corrupti facilis quasi eaque repudiandae velit nostrum vel doloribus ab, qui voluptatibus quidem? Impedit magni velit sit laudantium quidem eos sequi fugit quo officiis, accusamus sed earum, tempore neque voluptatibus enim nostrum! Blanditiis voluptate aut beatae exercitationem in, voluptas rerum nisi perferendis sed consectetur alias eligendi sit. Veritatis, quibusdam! Ullam officia ducimus voluptates laboriosam quae praesentium a et, laborum fuga error qui labore hic, possimus similique quis veritatis fugit, dolor nam eius? Odio a consequuntur veritatis mollitia sequi distinctio dicta! Porro, tempore qui!</p>
                     </div>
+                    
                     <div class="img-gallery">
                         <div class="row">
                             <div class="col-lg-6 col-md-6 mb-4">
@@ -167,9 +179,9 @@
                                     <img src="./img/gallery-1.jpeg" class="img-fluid" alt="image">
                                     <div class="content">
                                         <h3>
-                                            <a href="services-details.html">Aesthetic Dentistry</a>
+                                            <a href="services-details.html">Estetik Diş Hekimliği</a>
                                         </h3>
-                                        <span>Prosthodontics Dentist</span>
+                                        <span>Estetik Diş Hekimliği</span>
                                         <div class="icon">
                                             <a href="services-details.html"><i class="fa-solid fa-right-long"></i></a>
                                         </div>
@@ -181,9 +193,9 @@
                                     <img src="./img/gallery-2.jpeg" class="img-fluid" alt="image">
                                     <div class="content">
                                         <h3>
-                                            <a href="services-details.html">Periodontists Dentistry</a>
+                                            <a href="services-details.html">Periodontistler Diş Hekimliği</a>
                                         </h3>
-                                        <span>Periodontists Dentistry</span>
+                                        <span>Periodontistler Diş Hekimliği</span>
                                         <div class="icon">
                                             <a href="services-details.html"><i class="fa-solid fa-right-long"></i></a>
                                         </div>

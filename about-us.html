@@ -60,48 +60,64 @@
                     </button>
                     <div class="menu-area ">
                         <a class="navbar-brand d-lg-none d-block" href="index.html"><img src="./img/logo.png" class="img-fluid" alt="logo"></a>
-                        <ul class="d-flex align-items-center justify-content-center">
+                        <ul class="menu d-flex align-items-center justify-content-center">
                             <li class="nav-item">
-                                <a class="nav-link active" href="index.html">Ana Sayfa</a>
+                                <a class="nav-link " href="index.html">Ana Sayfa</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="about-us.html">Kurumsal</a>
+                                <a class="nav-link active" href="about-us.html" id="defaultDropdown">Kurumsal</a>
+                                <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-angle-right"></i>Hakkımızda</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-angle-right"></i>Neden Biz</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-angle-right"></i>Polikliniğimiz</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-angle-right"></i>İnsan Kaynakları</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-angle-right"></i>KVKK</a></li>
+                                </ul>
                             </li>
 
-                            <li class="nav-item dropdown">
-                                <a href="services.html" class="nav-link">
+                            <li class="nav-item">
+                                <a class="nav-link" href="services.html" id="defaultDropdown">
                                     Tedavilerimiz
                                 </a>
-                                <!--   <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul> -->
+
+                                <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-angle-right"></i>Öncesi & Sonrası</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-angle-right"></i>İmplant Diş</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-angle-right"></i>Ortodonti</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-angle-right"></i>Diş Beyazlatma </a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-angle-right"></i>Diş Temizliği </a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-angle-right"></i>Sterilizasyon </a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-angle-right"></i>Porcelen Diş Teli </a></li>
+
+                                </ul>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a href="doctors.html" class="nav-link">
+                            <li class="nav-item">
+                                <a class="nav-link" href="doctors.html" id="defaultDropdown">
                                     Hekimlerimiz
                                 </a>
-                                <!--   <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul> -->
+                                <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-angle-right"></i>Lorem Ipsum</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-angle-right"></i>Lorem Ipsum</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-angle-right"></i>Lorem Ipsum</a></li>
+                                </ul>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="blog.html">Blog</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="before-after.html">Öncesi & Sonrası</a>
-                            </li>
+
                             <li class="nav-item">
                                 <a class="nav-link" href="contact-us.html">İletişim</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="appoinment.html">Randevu Al</a>
+                            </li>
+                        </ul>
+                        <ul class="language-area-mobil d-flex d-lg-none">
+                            <li>
+                                <a type="button" href="">EN</a>
+                            </li>
+                            <li>
+                                <a type="button" href="">TR</a>
                             </li>
                         </ul>
                     </div>
@@ -165,7 +181,7 @@
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, rerum, commodi nemo maiores non earum velit suscipit id quas ducimus maxime veritatis est? Ut, facere exercitationem sapiente ducimus esse a voluptatem magnam. Provident recusandae doloremque veniam aliquid incidunt maiores. Tempore repellendus alias deserunt reiciendis error minus facere pariatur, voluptate illum.</p>
                         </div>
                         <div class="button-area">
-                            <a href="#" class="button">Randevu Al</a>
+                            <a href="appoinment.html" class="button">Randevu Al</a>
                         </div>
                     </div>
                 </div>
@@ -184,7 +200,7 @@
                         </h3>
                     </div>
                     <div class="button-area">
-                        <a href="" class="button">
+                        <a href="doctors.html" class="button">
                             Devamını Gör
                         </a>
                     </div>
@@ -198,7 +214,7 @@
                                         <a href="doctor-detail.html">
                                             <img src="./img/doctor.jpeg" class="card-img-top" alt="...">
                                         </a>
-                                        <a href="">
+                                        <a href="doctor-detail.html">
                                             <div class="overlay">
                                                 <i class="fa-solid fa-link"></i>
                                             </div>
@@ -218,7 +234,7 @@
                                         <a href="doctor-detail.html">
                                             <img src="./img/doctor-2.jpeg" class="card-img-top" alt="...">
                                         </a>
-                                        <a href="">
+                                        <a href="doctor-detail.html">
                                             <div class="overlay">
                                                 <i class="fa-solid fa-link"></i>
                                             </div>
@@ -238,7 +254,7 @@
                                         <a href="doctor-detail.html">
                                             <img src="./img/doctor-3.jpeg" class="card-img-top" alt="...">
                                         </a>
-                                        <a href="">
+                                        <a href="doctor-detail.html">
                                             <div class="overlay">
                                                 <i class="fa-solid fa-link"></i>
                                             </div>
@@ -258,7 +274,7 @@
                                         <a href="doctor-detail.html">
                                             <img src="./img/doctor-4.jpeg" class="card-img-top" alt="...">
                                         </a>
-                                        <a href="">
+                                        <a href="doctor-detail.html">
                                             <div class="overlay">
                                                 <i class="fa-solid fa-link"></i>
                                             </div>

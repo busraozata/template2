@@ -11,9 +11,6 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel='stylesheet' href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/124874/twentytwenty.css'>
     <link rel='stylesheet' href='https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css'>
-    <!-- FANCYBOX -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
-    <!-- FANCYBOX -->
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 
@@ -79,7 +76,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link " href="services.html" id="defaultDropdown">
+                                <a class="nav-link" href="services.html" id="defaultDropdown">
                                     Tedavilerimiz
                                 </a>
 
@@ -95,7 +92,7 @@
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="doctors.html" id="defaultDropdown">
+                                <a class="nav-link " href="doctors.html" id="defaultDropdown">
                                     Hekimlerimiz
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
@@ -105,11 +102,11 @@
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="blog.html">Blog</a>
+                                <a class="nav-link " href="blog.html">Blog</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="contact-us.html">İletişim</a>
+                                <a class="nav-link " href="contact-us.html">İletişim</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="appoinment.html">Randevu Al</a>
@@ -134,226 +131,228 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Doktorlarımız</h1>
+                    <h1>Randevu Al</h1>
                     <div class="d-flex align-items-center justify-content-start">
-                        <a href="index.html">Ana Sayfa</a> <i class="fa-solid fa-chevron-right"></i> <a href="doctor-detail.html">Doctorlarımız</a><i class="fa-solid fa-chevron-right"></i> <a href="doctor-detail.html">Dr. Johnson Melbourne</a>
+                        <a href="index.html">Ana Sayfa</a> <i class="fa-solid fa-chevron-right"></i> <a href="appoinment.html">Randevu Al</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="doctors-detail">
+
+   <!--  <section class="appoinment-page d-flex justify-content-center">
+        <div class="appoinment-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6 form-area" style="    background-color: var(--color-gray);">
+                        <div class="title">
+                            <h6>Bize</h6>
+                            <h3>
+                                Ulaşın
+                            </h3>
+
+                        </div>
+                        <div class="form">
+                            <form>
+                                <div class="row">
+                                    <div class="col-lg-6 mb-3">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="İsim Soyisim" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 mb-3">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="E - Mail" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 mb-3">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Telefon" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 mb-3">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Tarih" id="datetimepicker2" required>
+                                        </div>
+                                        <span>Randevu İstediğiniz Tarihi Seçebilirsiniz, Format (Gün-Ay-Yıl)</span>
+                                    </div>
+
+                                    <div class="col-lg-6 mb-3">
+                                        <div class="form-group">
+                                            <select class="form-select" aria-label="Default select example" required>
+                                                <option selected hidden>Bölüm Seçiniz</option>
+                                                <option value="Genel Diş Hekimliği">Genel Diş Hekimliği</option>
+                                                <option value="Kozmetik diş hekimliği">Kozmetik diş hekimliği</option>
+                                                <option value="Diş implantları">Diş implantları</option>
+                                                <option value="Genel Diş Hekimliği">Genel Diş Hekimliği</option>
+                                                <option value="Kozmetik diş hekimliği">Kozmetik diş hekimliği</option>
+                                                <option value="Diş implantları">Diş implantları</option>
+                                                <option value="Genel Diş Hekimliği">Genel Diş Hekimliği</option>
+                                                <option value="Kozmetik diş hekimliği">Kozmetik diş hekimliği</option>
+                                                <option value="Diş implantları">Diş implantları</option>
+                                            </select>
+                                            <span>Hangi Bölüme Randevu Talep Ediyorsunuz?</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 mb-3">
+                                        <div class="form-check-group h-100 d-flex justify-content-start align-items-center">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                <label class="form-check-label" for="flexRadioDefault1">
+                                                    Kadın
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                                <label class="form-check-label" for="flexRadioDefault2">
+                                                    Erkek
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 mb-3">
+                                        <div class="form-group">
+                                            <textarea class="form-control" placeholder="Mesaj Yazın" rows="8"></textarea>
+                                        </div>
+                                        <span>Doktorunuza eklemek istediğiniz bir ayrıntı var ise lütfen belirtiniz.</span>
+                                    </div>
+                                </div>
+
+                                <div class="button-area">
+                                    <button type="submit" class="button">Randevu Al</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-6" style="background: url(./img/artificial-jaw-dentist-s-office.jpg); background-size: cover; background-position: center; background-repeat: no-repeat; ">
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section class="contact-page">
         <div class="container">
             <div class="row">
-              
-                <div class="col-lg-8">
-                    <div class="row">
+                <div class="col-lg-6">
+                    <div class="title">
+                        <h6>Uzmana</h6>
                         <h3>
-                            Dr. Johnson Melbourne
+                            Danışın
                         </h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi laboriosam culpa, eius ipsa voluptatibus, officia quia debitis sed voluptate deserunt repellat reiciendis unde corporis maxime recusandae ab, illum eum voluptatum alias ullam! Aspernatur, voluptas aliquam quod architecto at repellat commodi excepturi molestias cupiditate! Labore esse error accusantium repellat aperiam, laboriosam quas tempora dicta tempore, quod possimus, deserunt provident modi! Nostrum impedit ratione dolorum quaerat dignissimos perspiciatis possimus atque. Sapiente iusto odit dicta quod nostrum, laborum dolorem asperiores magnam exercitationem consequuntur voluptate, quae vel incidunt consectetur pariatur tempora saepe quis sint ex sequi suscipit. Dolorem id fuga, tenetur voluptate optio sint!</p>
+                        
+                    </div>
+                    <div class="form">
+                        <form>
+                            <div class="row">
+                                <div class="col-lg-6 mb-3">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="İsim Soyisim" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-3">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="E - Mail" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-3">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Telefon" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-3">
+                                    <div class="form-check-group h-100 d-flex justify-content-start align-items-center">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                            <label class="form-check-label" for="flexRadioDefault1">
+                                                Kadın
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                Erkek
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
 
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste nemo impedit consequatur, optio deleniti magni, id quasi non libero placeat dignissimos eos temporibus consequuntur ad earum quis? Itaque impedit asperiores quos cum eius saepe, ipsam eveniet sequi odio eos quibusdam non dolores eum maxime nam nobis libero voluptatum dicta molestias. Sint odit impedit possimus dolorem ea nemo optio, alias deserunt.</p>
+                                <div class="col-lg-6 mb-3">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Tarih" id="datetimepicker2" required>
+                                    </div>
+                                    <span>Randevu İstediğiniz Tarihi Seçebilirsiniz</span>
+                                </div>
 
-                        <div class="col-lg-6 mb-3" data-aos="zoom-in">
-                            <a href="./img/dentist-details-1.jpg" data-fancybox="gallery">
-                                <div class="img-wrapper">
-                                    <img src="./img/dentist-details-1.jpg" class="img-fluid gallery-item" alt="Image Gallery">
+                                <div class="col-lg-6 mb-3">
+                                    <div class="form-group">
+                                        <select class="form-select" aria-label="Default select example" required>
+                                            <option selected hidden>Bölüm Seçiniz</option>
+                                            <option value="Genel Diş Hekimliği">Genel Diş Hekimliği</option>
+                                            <option value="Kozmetik diş hekimliği">Kozmetik diş hekimliği</option>
+                                            <option value="Diş implantları">Diş implantları</option>
+                                            <option value="Genel Diş Hekimliği">Genel Diş Hekimliği</option>
+                                            <option value="Kozmetik diş hekimliği">Kozmetik diş hekimliği</option>
+                                            <option value="Diş implantları">Diş implantları</option>
+                                            <option value="Genel Diş Hekimliği">Genel Diş Hekimliği</option>
+                                            <option value="Kozmetik diş hekimliği">Kozmetik diş hekimliği</option>
+                                            <option value="Diş implantları">Diş implantları</option>
+                                        </select>
+                                        <span>Hangi Bölüme Randevu Talep Ediyorsunuz?</span>
+                                    </div>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-6 mb-3" data-aos="zoom-in">
-                            <a href="./img/dentist-details-2.jpg" data-fancybox="gallery">
-                                <div class="img-wrapper">
-                                    <img src="./img/dentist-details-2.jpg" class="img-fluid gallery-item" alt="Image Gallery">
+                                
+                               
+                                <div class="col-lg-12 mb-3">
+                                    <div class="form-group">
+                                        <textarea class="form-control" placeholder="Mesaj Yazın" rows="8"></textarea>
+                                    </div>
+                                    <span>Doktorunuza eklemek istediğiniz bir ayrıntı var ise lütfen belirtiniz.</span>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-6 mb-3" data-aos="zoom-in">
-                            <a href="./img/artificial-jaw-dentist-s-office.jpg" data-fancybox="gallery">
-                                <div class="img-wrapper">
-                                    <img src="./img/artificial-jaw-dentist-s-office.jpg" class="img-fluid gallery-item" alt="Image Gallery">
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-6 mb-3" data-aos="zoom-in">
-                            <a href="./img/dentist-details-1.jpg" data-fancybox="gallery">
-                                <div class="img-wrapper">
-                                    <img src="./img/woman-patient-dentist.jpg" class="img-fluid gallery-item" alt="Image Gallery">
-                                </div>
-                            </a>
-                        </div>
-                
+                            </div>
+
+                            <div class="button-area">
+                                <button type="submit" class="button">Randevu Al</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <h6>Hekim Bilgileri</h6>
-                    <div class="img-wrapper">
-                        <img src="./img/doctor-4.jpeg" class="img-fluid" alt="">
+                <div class="col-lg-6 contact-info">
+                    <h6>İletişim</h6>
+                    <h3 class="mb-5">
+                        Bilgilerimiz
+                    </h3>
+                    <div class="box mb-4">
+                        <div class="content">
+                            <h4 class="mb-3">Telefon</h4>
+                            <a href="">
+                                <i class="fa-solid fa-phone"></i> 0 543 235 69 99
+                            </a>
+                        </div>
+                    </div>
+                    <div class="box mb-4">
+                        <div class="content">
+                            <h4 class="mb-3">Adres</h4>
+                            <p>Zeytinlik mah. Türkçü sok No:16 Ferah Palas Apt. A Blok D:11, 34140 Bakırköy/İstanbul</p>
+                        </div>
+                    </div>
+                    <div class="box mb-5">
+                        <div class="content">
+                            <h4 class="mb-3">Sosyal Medya</h4>
+                            <ul class="d-flex align-items-center justify-content-start">
+                                <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                                <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <section class="services">
-
-        <div class="container-fluid">
-            <div class="services-area">
-                <div class="swiper mySwiperServices">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="row w-100">
-                                <div class="col-lg-6 p-0">
-                                    <picture>
-                                        <img src="./img/fchSQFn5MoDpKnlV6BLF.jpg" class="img-fluid" alt="">
-                                    </picture>
-                                </div>
-                                <div class="col-lg-6 service-content d-flex flex-column align-items-start justify-content-start">
-                                    <h6>Tedavilerimiz</h6>
-                                    <h4 class="d-flex align-items-center">
-                                        <strong>
-                                            Ortodonti
-                                        </strong>
-                                        <span class="d-lg-block d-none">Tel Tedavisi</span>
-                                    </h4>
-                                    <p>
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium quaerat
-                                        vitae, perferendis illum odit eum sit, culpa, cum soluta possimus nulla porro
-                                        quae voluptate quasi nemo maiores in saepe nesciunt eaque! Totam sapiente,
-                                        consequatur repellendus laudantium ad est soluta quo nesciunt enim maiores,
-                                        necessitatibus, rem sint eaque ea dolorem obcaecati!
-                                    </p>
-                                    <div class="d-lg-flex align-items-center justify-content-start">
-                                        <div class="expert d-flex align-items-center justify-content-between">
-                                            <div class="cicon-area">
-                                                <i class="fa-solid fa-user-doctor"></i>
-                                            </div>
-                                            <div class="expert-detail">
-                                                <h5>Uzman</h5>
-                                                <span>5 Uzman</span>
-                                            </div>
-                                        </div>
-                                        <div class="time d-flex align-items-center">
-                                            <i class="fa-solid fa-clock-rotate-left"></i>
-                                            <div class="time-detail">
-                                                <h5>Pzt - Cmt</h5>
-                                                <span>09:00 - 22:00</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="button-area">
-                                        <a href="" class="button">
-                                            Randevu Al
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="row w-100">
-                                <div class="col-lg-6 p-0">
-                                    <picture>
-                                        <img src="./img/fchSQFn5MoDpKnlV6BLF.jpg" class="img-fluid" alt="">
-                                    </picture>
-                                </div>
-                                <div class="col-lg-6 service-content d-flex flex-column align-items-start justify-content-start">
-                                    <h6>Tedavilerimiz</h6>
-                                    <h4 class="d-flex align-items-center">
-                                        <strong>
-                                            Ortodonti
-                                        </strong>
-                                        <span class="d-lg-block d-none">Tel Tedavisi</span>
-                                    </h4>
-                                    <p>
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium quaerat
-                                        vitae, perferendis illum odit eum sit, culpa, cum soluta possimus nulla porro
-                                        quae voluptate quasi nemo maiores in saepe nesciunt eaque! Totam sapiente,
-                                        consequatur repellendus laudantium ad est soluta quo nesciunt enim maiores,
-                                        necessitatibus, rem sint eaque ea dolorem obcaecati!
-                                    </p>
-                                    <div class="d-lg-flex align-items-center justify-content-start">
-                                        <div class="expert d-flex align-items-center justify-content-between">
-                                            <div class="cicon-area">
-                                                <i class="fa-solid fa-user-doctor"></i>
-                                            </div>
-                                            <div class="expert-detail">
-                                                <h5>Uzman</h5>
-                                                <span>5 Uzman</span>
-                                            </div>
-                                        </div>
-                                        <div class="time d-flex align-items-center">
-                                            <i class="fa-solid fa-clock-rotate-left"></i>
-                                            <div class="time-detail">
-                                                <h5>Pzt - Cmt</h5>
-                                                <span>09:00 - 22:00</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="button-area">
-                                        <a href="" class="button">
-                                            Randevu Al
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="row w-100">
-                                <div class="col-lg-6 p-0">
-                                    <picture>
-                                        <img src="./img/fchSQFn5MoDpKnlV6BLF.jpg" class="img-fluid" alt="">
-                                    </picture>
-                                </div>
-                                <div class="col-lg-6 service-content d-flex flex-column align-items-start justify-content-start">
-                                    <h6>Tedavilerimiz</h6>
-                                    <h4 class="d-flex align-items-center">
-                                        <strong>
-                                            Ortodonti
-                                        </strong>
-                                        <span class="d-lg-block d-none">Tel Tedavisi</span>
-                                    </h4>
-                                    <p>
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium quaerat
-                                        vitae, perferendis illum odit eum sit, culpa, cum soluta possimus nulla porro
-                                        quae voluptate quasi nemo maiores in saepe nesciunt eaque! Totam sapiente,
-                                        consequatur repellendus laudantium ad est soluta quo nesciunt enim maiores,
-                                        necessitatibus, rem sint eaque ea dolorem obcaecati!
-                                    </p>
-                                    <div class="d-lg-flex align-items-center justify-content-start">
-                                        <div class="expert d-flex align-items-center justify-content-between">
-                                            <div class="cicon-area">
-                                                <i class="fa-solid fa-user-doctor"></i>
-                                            </div>
-                                            <div class="expert-detail">
-                                                <h5>Uzman</h5>
-                                                <span>5 Uzman</span>
-                                            </div>
-                                        </div>
-                                        <div class="time d-flex align-items-center">
-                                            <i class="fa-solid fa-clock-rotate-left"></i>
-                                            <div class="time-detail">
-                                                <h5>Pzt - Cmt</h5>
-                                                <span>09:00 - 22:00</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="button-area">
-                                        <a href="" class="button">
-                                            Randevu Al
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="swiper-button-next modal-swiper-button-next"></div>
-                    <div class="swiper-button-prev modal-swiper-button-prev"></div>
-                </div>
-            </div>
-        </div>
-
     </section>
 
     <section class="doctors">
@@ -367,7 +366,7 @@
                         </h3>
                     </div>
                     <div class="button-area">
-                        <a href="" class="button">
+                        <a href="doctors.html" class="button">
                             Devamını Gör
                         </a>
                     </div>
@@ -381,7 +380,7 @@
                                         <a href="doctor-detail.html">
                                             <img src="./img/doctor.jpeg" class="card-img-top" alt="...">
                                         </a>
-                                        <a href="">
+                                        <a href="doctor-detail.html">
                                             <div class="overlay">
                                                 <i class="fa-solid fa-link"></i>
                                             </div>
@@ -401,7 +400,7 @@
                                         <a href="doctor-detail.html">
                                             <img src="./img/doctor-2.jpeg" class="card-img-top" alt="...">
                                         </a>
-                                        <a href="">
+                                        <a href="doctor-detail.html">
                                             <div class="overlay">
                                                 <i class="fa-solid fa-link"></i>
                                             </div>
@@ -421,7 +420,7 @@
                                         <a href="doctor-detail.html">
                                             <img src="./img/doctor-3.jpeg" class="card-img-top" alt="...">
                                         </a>
-                                        <a href="">
+                                        <a href="doctor-detail.html">
                                             <div class="overlay">
                                                 <i class="fa-solid fa-link"></i>
                                             </div>
@@ -441,7 +440,7 @@
                                         <a href="doctor-detail.html">
                                             <img src="./img/doctor-4.jpeg" class="card-img-top" alt="...">
                                         </a>
-                                        <a href="">
+                                        <a href="doctor-detail.html">
                                             <div class="overlay">
                                                 <i class="fa-solid fa-link"></i>
                                             </div>
@@ -462,6 +461,7 @@
             </div>
         </div>
     </section>
+
 
     <footer style="background-image: url(./img/full-equiped-medical-cabinet.jpg); background-position:center; background-size: cover;">
         <div class="container">
