@@ -1,5 +1,21 @@
 $(".twentytwenty-container").twentytwenty({ default_offset_pct: 0.5 });
 
+var btn = $('#back-to-top');
+
+$(window).scroll(function () {
+    if ($(window).scrollTop() > 300) {
+        btn.addClass('show');
+    } else {
+        btn.removeClass('show');
+    }
+});
+
+btn.on('click', function (e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: 0 }, '300');
+});
+
+
 
 const hamburgerMenu = document.querySelector('.hamburger');
 const menuArea = document.querySelector('.menu-area')
@@ -200,8 +216,6 @@ $('[data-fancybox="gallery"]').fancybox({
     loop: false,
     protect: true
 });
-
-
 
 
 

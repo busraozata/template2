@@ -39,7 +39,13 @@ a {
 header {
   position: absolute;
   width: 100%;
-  z-index: 99;
+  z-index: 99999;
+}
+
+@media screen and (min-width: 991px) {
+  header .container {
+    position: relative;
+  }
 }
 
 header .top-line {
@@ -121,16 +127,12 @@ header .header-inner.sticky .navbar-brand img {
 
 header .header-inner.sticky .menu-area ul {
   margin-bottom: 0rem !important;
-  /*  li {
-                        a {
-                            &.active {
-                                color: var(--color-black) !important;
-                            }
-                            &:hover {
-                                color: var(--color-black) !important;
-                            }
-                        }
-                    } */
+}
+
+@media screen and (max-width: 991px) {
+  header .header-inner.sticky .menu-area ul {
+    margin-bottom: 2rem !important;
+  }
 }
 
 header .header-inner .header-area .navbar-brand img {
@@ -236,6 +238,21 @@ header .header-inner .header-area .menu-area ul .nav-item .dropdown-menu {
   padding: 1rem;
   border: none;
   border-bottom: 2px solid var(--color-light-blue) !important;
+  left: 0rem;
+}
+
+@media screen and (max-width: 991px) {
+  header .header-inner .header-area .menu-area ul .nav-item .dropdown-menu {
+    height: 15rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}
+
+header .header-inner .header-area .menu-area ul .nav-item .dropdown-menu img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media screen and (max-width: 991px) {
@@ -276,6 +293,57 @@ header .header-inner .header-area .menu-area ul .nav-item:hover .dropdown-menu {
 
 header .header-inner .header-area .menu-area ul .nav-item:hover .dropdown-menu .dropdown-item {
   background-color: transparent;
+}
+
+@media screen and (min-width: 991px) {
+  header .header-inner .header-area .menu-area ul .nav-item .sub-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+header .header-inner .header-area .menu-area ul .nav-item .sub-item li {
+  position: relative;
+}
+
+@media screen and (min-width: 991px) {
+  header .header-inner .header-area .menu-area ul .nav-item .sub-item li {
+    width: calc(50% - 30px);
+    padding: 0.5rem 0rem;
+    margin: 0 0.5rem;
+  }
+}
+
+header .header-inner .header-area .menu-area ul .nav-item .sub-item li:hover::before {
+  width: 100%;
+}
+
+header .header-inner .header-area .menu-area ul .nav-item .sub-item li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: auto;
+  background-color: var(--color-light-blue);
+  width: 0;
+  height: 0.1rem;
+  border-radius: 2px;
+  bottom: -1px;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 @media screen and (max-width: 991px) {
@@ -1246,8 +1314,14 @@ header .header-inner .header-area .menu-area.active .language-area-mobil li a {
 .blog .blog-area .swiper .card .card-body .card-title a {
   color: var(--color-light-blue);
   font-weight: 500;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 991px) {
+  .blog .blog-area .swiper .card .card-body .card-title a {
+    font-size: 1.3rem;
+  }
 }
 
 .blog .blog-area .swiper .card .card-body p {
@@ -1828,7 +1902,6 @@ header .header-inner .header-area .menu-area.active .language-area-mobil li a {
 
 .doctors .swiper .swiper-slide .card {
   border-bottom: 1px solid var(--color-light-blue);
-  border-radius: 10px 10px;
   -webkit-transition: 0.6s;
   transition: 0.6s;
   border: none;
@@ -1847,7 +1920,6 @@ header .header-inner .header-area .menu-area.active .language-area-mobil li a {
 .doctors .swiper .swiper-slide .card .top a .card-img-top {
   -webkit-transition: 0.6s;
   transition: 0.6s;
-  border-radius: 10px 10px 0 0;
   height: 24rem;
 }
 
@@ -1905,21 +1977,20 @@ header .header-inner .header-area .menu-area.active .language-area-mobil li a {
   -webkit-box-shadow: 0 0 1.25rem rgba(108, 118, 134, 0.1);
   box-shadow: 0 0 1.25rem rgba(108, 118, 134, 0.1);
   border-bottom: 1px solid var(--color-light-blue);
-  border-radius: 0 0 10px 10px;
   -webkit-transition: 0.6s all;
   transition: 0.6s all;
-  height: 14rem;
+  height: 18rem;
 }
 
 .doctors .swiper .swiper-slide .card .card-body .card-title {
   color: var(--color-light-blue);
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   font-weight: 700;
 }
 
 @media screen and (max-width: 991px) {
   .doctors .swiper .swiper-slide .card .card-body .card-title {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -1937,6 +2008,63 @@ header .header-inner .header-area .menu-area.active .language-area-mobil li a {
 
 .doctors .swiper .swiper-slide .card .card-body {
   height: 8rem;
+}
+
+.doctors .swiper .swiper-slide .card .card-body .user-info {
+  text-align: left !important;
+}
+
+.doctors .swiper .swiper-slide .card .card-body .button-area .button {
+  position: relative;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  color: var(--color-white);
+  border: 1px solid var(--color-white);
+  margin-top: 2rem;
+  font-weight: 500;
+  font-size: 1.2rem;
+  border-radius: 0;
+  color: var(--color-light-blue);
+  border-color: var(--color-light-blue);
+  margin-top: 0rem;
+  font-size: 1rem;
+}
+
+.doctors .swiper .swiper-slide .card .card-body .button-area .button::before, .doctors .swiper .swiper-slide .card .card-body .button-area .button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px solid var(--color-white);
+  width: 1em;
+  height: 1em;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  z-index: 5;
+}
+
+.doctors .swiper .swiper-slide .card .card-body .button-area .button:before {
+  top: -6px;
+  left: -6px;
+  border-width: 2px 0 0 2px;
+}
+
+.doctors .swiper .swiper-slide .card .card-body .button-area .button:after {
+  bottom: -6px;
+  right: -6px;
+  border-width: 0 2px 2px 0;
+}
+
+.doctors .swiper .swiper-slide .card .card-body .button-area .button:hover:before, .doctors .swiper .swiper-slide .card .card-body .button-area .button:hover::after {
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.doctors .swiper .swiper-slide .card .card-body .button-area .button::before, .doctors .swiper .swiper-slide .card .card-body .button-area .button::after {
+  border-color: var(--color-light-blue);
 }
 
 .doctors .swiper .swiper-slide .card .top {
@@ -2554,7 +2682,7 @@ header .header-inner .header-area .menu-area.active .language-area-mobil li a {
 }
 
 .poliklinik .img-wrapper::before {
-  content: '';
+  content: "";
   background-color: rgba(0, 0, 0, 0.555);
   position: absolute;
   height: 0%;
@@ -2870,7 +2998,6 @@ header .header-inner .header-area .menu-area.active .language-area-mobil li a {
 
 .services-page .card {
   border-bottom: 1px solid var(--color-light-blue);
-  border-radius: 10px 10px;
   -webkit-transition: 0.6s;
   transition: 0.6s;
   border: none;
@@ -2888,7 +3015,6 @@ header .header-inner .header-area .menu-area.active .language-area-mobil li a {
 .services-page .card .top a .card-img-top {
   -webkit-transition: 0.6s;
   transition: 0.6s;
-  border-radius: 10px 10px 0 0;
   height: 24rem;
 }
 
@@ -2946,21 +3072,20 @@ header .header-inner .header-area .menu-area.active .language-area-mobil li a {
   -webkit-box-shadow: 0 0 1.25rem rgba(108, 118, 134, 0.1);
   box-shadow: 0 0 1.25rem rgba(108, 118, 134, 0.1);
   border-bottom: 1px solid var(--color-light-blue);
-  border-radius: 0 0 10px 10px;
   -webkit-transition: 0.6s all;
   transition: 0.6s all;
-  height: 14rem;
+  height: 18rem;
 }
 
 .services-page .card .card-body .card-title {
   color: var(--color-light-blue);
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   font-weight: 700;
 }
 
 @media screen and (max-width: 991px) {
   .services-page .card .card-body .card-title {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -2974,6 +3099,13 @@ header .header-inner .header-area .menu-area.active .language-area-mobil li a {
   .services-page .card .card-body p {
     font-size: 0.9rem;
   }
+}
+
+.services-page .card .button {
+  color: var(--color-light-blue);
+  margin-top: 1rem;
+  font-weight: 400;
+  font-size: 1rem;
 }
 
 .services-page .card:hover {
@@ -3001,6 +3133,10 @@ header .header-inner .header-area .menu-area.active .language-area-mobil li a {
 
 .services-page .card:hover .card-body .card-title,
 .services-page .card:hover .card-body p {
+  color: var(--color-white);
+}
+
+.services-page .card:hover .card-body .button {
   color: var(--color-white);
 }
 
@@ -3076,10 +3212,6 @@ header .header-inner .header-area .menu-area.active .language-area-mobil li a {
 .service-detail .img-gallery .single-gallery:hover {
   -webkit-transform: translateY(-10px);
           transform: translateY(-10px);
-}
-
-.service-detail .img-gallery .single-gallery img {
-  border-radius: 10px;
 }
 
 .service-detail .img-gallery .single-gallery:before {
@@ -3227,7 +3359,6 @@ header .header-inner .header-area .menu-area.active .language-area-mobil li a {
   color: var(--color-white);
   padding: 0.7rem 1.5rem;
   border: none;
-  border-radius: 0.5rem;
   font-weight: 500;
   font-size: 0.9rem;
   margin-top: 0.8rem;
@@ -3278,7 +3409,6 @@ header .header-inner .header-area .menu-area.active .language-area-mobil li a {
 
 .doctors-page .card {
   border-bottom: 1px solid var(--color-light-blue);
-  border-radius: 10px 10px;
   -webkit-transition: 0.6s;
   transition: 0.6s;
   border: none;
@@ -3297,7 +3427,6 @@ header .header-inner .header-area .menu-area.active .language-area-mobil li a {
 .doctors-page .card .top a .card-img-top {
   -webkit-transition: 0.6s;
   transition: 0.6s;
-  border-radius: 10px 10px 0 0;
   height: 24rem;
 }
 
@@ -3355,21 +3484,20 @@ header .header-inner .header-area .menu-area.active .language-area-mobil li a {
   -webkit-box-shadow: 0 0 1.25rem rgba(108, 118, 134, 0.1);
   box-shadow: 0 0 1.25rem rgba(108, 118, 134, 0.1);
   border-bottom: 1px solid var(--color-light-blue);
-  border-radius: 0 0 10px 10px;
   -webkit-transition: 0.6s all;
   transition: 0.6s all;
-  height: 14rem;
+  height: 18rem;
 }
 
 .doctors-page .card .card-body .card-title {
   color: var(--color-light-blue);
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   font-weight: 700;
 }
 
 @media screen and (max-width: 991px) {
   .doctors-page .card .card-body .card-title {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -3391,7 +3519,64 @@ header .header-inner .header-area .menu-area.active .language-area-mobil li a {
 }
 
 .doctors-page .card .card-body {
-  height: 8rem;
+  height: 10rem;
+}
+
+.doctors-page .card .card-body .user-info {
+  text-align: left !important;
+}
+
+.doctors-page .card .card-body .button-area .button {
+  position: relative;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  color: var(--color-white);
+  border: 1px solid var(--color-white);
+  margin-top: 2rem;
+  font-weight: 500;
+  font-size: 1.2rem;
+  border-radius: 0;
+  color: var(--color-light-blue);
+  border-color: var(--color-light-blue);
+  margin-top: 0rem;
+  font-size: 1rem;
+}
+
+.doctors-page .card .card-body .button-area .button::before, .doctors-page .card .card-body .button-area .button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px solid var(--color-white);
+  width: 1em;
+  height: 1em;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  z-index: 5;
+}
+
+.doctors-page .card .card-body .button-area .button:before {
+  top: -6px;
+  left: -6px;
+  border-width: 2px 0 0 2px;
+}
+
+.doctors-page .card .card-body .button-area .button:after {
+  bottom: -6px;
+  right: -6px;
+  border-width: 0 2px 2px 0;
+}
+
+.doctors-page .card .card-body .button-area .button:hover:before, .doctors-page .card .card-body .button-area .button:hover::after {
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.doctors-page .card .card-body .button-area .button::before, .doctors-page .card .card-body .button-area .button::after {
+  border-color: var(--color-light-blue);
 }
 
 .doctors-page .card .top {
@@ -3534,7 +3719,6 @@ header .header-inner .header-area .menu-area.active .language-area-mobil li a {
 
 .blog-page .card {
   border-bottom: 1px solid var(--color-light-blue);
-  border-radius: 10px 10px;
   -webkit-transition: 0.6s;
   transition: 0.6s;
   border: none;
@@ -3553,7 +3737,6 @@ header .header-inner .header-area .menu-area.active .language-area-mobil li a {
 .blog-page .card .top a .card-img-top {
   -webkit-transition: 0.6s;
   transition: 0.6s;
-  border-radius: 10px 10px 0 0;
   height: 24rem;
 }
 
@@ -3611,21 +3794,20 @@ header .header-inner .header-area .menu-area.active .language-area-mobil li a {
   -webkit-box-shadow: 0 0 1.25rem rgba(108, 118, 134, 0.1);
   box-shadow: 0 0 1.25rem rgba(108, 118, 134, 0.1);
   border-bottom: 1px solid var(--color-light-blue);
-  border-radius: 0 0 10px 10px;
   -webkit-transition: 0.6s all;
   transition: 0.6s all;
-  height: 14rem;
+  height: 18rem;
 }
 
 .blog-page .card .card-body .card-title {
   color: var(--color-light-blue);
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   font-weight: 700;
 }
 
 @media screen and (max-width: 991px) {
   .blog-page .card .card-body .card-title {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -3689,11 +3871,6 @@ header .header-inner .header-area .menu-area.active .language-area-mobil li a {
           align-items: center;
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
-}
-
-.blog-page .card .card-body {
-  padding: 1.5rem 2rem;
-  height: 16rem;
 }
 
 .blog-page .card .continue {
@@ -4042,10 +4219,6 @@ header .header-inner .header-area .menu-area.active .language-area-mobil li a {
 .appoinment-page {
   padding: 5rem 2rem;
   position: relative;
-  /*  .appoinment-content {
-        max-width: 65rem;
-        width: 100%;
-    } */
 }
 
 @media screen and (max-width: 991px) {
@@ -4339,6 +4512,48 @@ footer .copyright span {
 
 footer .copyright img {
   max-width: 2rem;
+}
+
+#back-to-top {
+  display: inline-block;
+  background-color: var(--color-light-blue);
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  -webkit-transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  z-index: 99;
+}
+
+#back-to-top::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.5em;
+  line-height: 50px;
+  color: var(--color-white);
+}
+
+#back-to-top:hover {
+  cursor: pointer;
+  background-color: var(--color-gray-text);
+}
+
+#back-to-top:active {
+  background-color: var(--color-gray-text);
+}
+
+#back-to-top.show {
+  opacity: 1;
+  visibility: visible;
 }
 
 @-webkit-keyframes spin {
