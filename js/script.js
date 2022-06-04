@@ -1,4 +1,5 @@
 $(".twentytwenty-container").twentytwenty({ default_offset_pct: 0.5 });
+/* ------------------------------------------------------------- */
 
 var btn = $('#back-to-top');
 
@@ -16,6 +17,14 @@ btn.on('click', function (e) {
 });
 
 
+/* ------------------------------------------------------------- */
+
+$(".mega-menu .sub-item .dropdown-item").on("mouseover", function () {
+    var imgPath = $(this).attr("data-image");
+
+    $(".mega-menu .img-wrapper img").attr("src", imgPath);
+});
+/* ------------------------------------------------------------- */
 
 const hamburgerMenu = document.querySelector('.hamburger');
 const menuArea = document.querySelector('.menu-area')
@@ -30,6 +39,7 @@ window.addEventListener("scroll", function () {
     header.classList.toggle('sticky', window.scrollY > 100);
 
 })
+/* ------------------------------------------------------------- */
 
 var swiper = new Swiper(".mySwiper", {
     effect: "fade",
@@ -47,6 +57,8 @@ var swiper = new Swiper(".mySwiper", {
     debugger: true,
 
 });
+/* ------------------------------------------------------------- */
+
 
 var swiper2 = new Swiper(".swiper.mySwiperServices", {
     navigation: {
@@ -62,6 +74,7 @@ var swiper2 = new Swiper(".swiper.mySwiperServices", {
     debugger: true,
 
 });
+/* ------------------------------------------------------------- */
 
 
 var slider3 = new Swiper('.swiper.mySwiperBlog', {
@@ -94,6 +107,7 @@ var slider3 = new Swiper('.swiper.mySwiperBlog', {
     },
 });
 
+/* ------------------------------------------------------------- */
 
 
 var swiper = new Swiper(".mySwiperComments", {
@@ -106,6 +120,7 @@ var swiper = new Swiper(".mySwiperComments", {
     },
 
 });
+/* ------------------------------------------------------------- */
 
 var swiper = new Swiper(".mySwiperDoctors", {
     slidesPerView: 1,
@@ -133,6 +148,7 @@ var swiper = new Swiper(".mySwiperDoctors", {
         },
     },
 });
+/* ------------------------------------------------------------- */
 
 var swiper = new Swiper(".mySwiperLastPosts", {
     direction: 'vertical',
@@ -157,6 +173,7 @@ var swiper = new Swiper(".mySwiperLastPosts", {
         },
     },
 });
+/* ------------------------------------------------------------- */
 
 $(function () {
 
@@ -165,6 +182,7 @@ $(function () {
     });
 
 });
+/* ------------------------------------------------------------- */
 
 const acc = document.getElementsByClassName("accordion");
 let i;
@@ -192,16 +210,8 @@ for (i = 0; i < acc.length; i++) {
 
     });
 }
+/* ------------------------------------------------------------- */
 
-$(this).load(function () {
-    $("#before_after").twentytwenty();
-});
-$(this).load(function () {
-    $("#before_after2").twentytwenty();
-});
-$(this).load(function () {
-    $("#before_after3").twentytwenty();
-});
 
 // Fancybox Config
 $('[data-fancybox="gallery"]').fancybox({

@@ -80,6 +80,7 @@ $xxl-breakpoint: 1400px; //Extra extra large
     }
 
     &:hover {
+
         &:before,
         &::after {
             width: calc(100% + 12px);
@@ -335,6 +336,7 @@ $xxl-breakpoint: 1400px; //Extra extra large
                 align-items: center;
                 box-shadow: 0px 2px 27px -10px rgba(0, 0, 0, 0.55);
                 transition: 0.6s;
+
                 @media screen and(max-width:$lg-breakpoint) {
                     height: 5rem;
                     width: 5rem;
@@ -383,10 +385,19 @@ $xxl-breakpoint: 1400px; //Extra extra large
     }
 }
 
+
+.megadropdown-slider .item {
+    height: 30vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
 header {
     position: absolute;
     width: 100%;
     z-index: 99999;
+
     @media screen and(min-width:$lg-breakpoint) {
         .container {
             position: relative;
@@ -418,7 +429,8 @@ header {
                         color: var(--color-white);
                         transition: 0.3s all;
                         font-size: 0.9rem;
-                        @media screen and(max-width:$xl-breakpoint) {
+
+                        @media screen and(max-width:1440px) {
                             font-size: 0.8rem;
                         }
 
@@ -435,6 +447,7 @@ header {
                         display: block;
                     }
                 }
+
                 .btn {
                     color: var(--color-white);
                     font-size: 0.9rem;
@@ -447,6 +460,7 @@ header {
 
                 .dropdown-menu {
                     min-width: 3rem;
+
                     li {
                         a {
                             color: var(--color-light-blue);
@@ -480,6 +494,7 @@ header {
             .menu-area {
                 ul {
                     margin-bottom: 0rem !important;
+
                     @media screen and(max-width:$lg-breakpoint) {
                         margin-bottom: 2rem !important;
                     }
@@ -552,16 +567,19 @@ header {
                             border: 1px solid var(--color-light-blue);
                             background-color: var(--color-light-blue);
                             transition: 0.3s all;
+
                             &:hover {
                                 background-color: transparent;
                             }
                         }
+
                         a {
                             color: var(--color-white);
                             cursor: pointer;
                             transition: 0.3s all;
                             font-size: 1.2rem;
                             font-weight: 500;
+
                             @media screen and(max-width:$xl-breakpoint) {
                                 font-size: 1rem;
                             }
@@ -574,12 +592,14 @@ header {
                                 color: var(--color-light-blue);
                             }
                         }
+
                         .dropdown-menu {
                             min-width: 20rem;
                             padding: 1rem;
                             border: none;
                             border-bottom: 2px solid var(--color-light-blue) !important;
                             left: 0rem;
+
                             @media screen and(max-width:$lg-breakpoint) {
                                 height: 15rem;
                                 overflow-y: auto;
@@ -587,27 +607,32 @@ header {
                             }
 
                             img {
-                                height: 100%;
                                 object-fit: cover;
+                                transition: 0.3s all;
                             }
+
                             @media screen and(max-width:$lg-breakpoint) {
                                 position: relative !important;
                                 transform: inherit !important;
                                 border: none !important;
                                 padding: 0;
                             }
+
                             li {
                                 a {
                                     color: var(--color-gray-text);
                                     font-size: 1rem;
                                     font-weight: 400;
                                     transition: 0.3s all;
+
                                     &:hover {
                                         color: var(--color-light-blue);
+
                                         i {
                                             margin-right: 1rem;
                                         }
                                     }
+
                                     i {
                                         margin-right: 0.5rem;
                                         transition: 0.5s all;
@@ -615,14 +640,17 @@ header {
                                 }
                             }
                         }
+
                         &:hover {
                             .dropdown-menu {
                                 display: block;
+
                                 .dropdown-item {
                                     background-color: transparent;
                                 }
                             }
                         }
+
                         .sub-item {
                             @media screen and (min-width: $lg-breakpoint) {
                                 display: flex;
@@ -635,18 +663,20 @@ header {
                             li {
                                 @media screen and (min-width: $lg-breakpoint) {
                                     width: calc(50% - 30px);
-                                   
+
                                     padding: 0.5rem 0rem;
 
                                     margin: 0 0.5rem;
                                 }
 
                                 position: relative;
+
                                 &:hover {
                                     &::before {
                                         width: 100%;
                                     }
                                 }
+
                                 &::before {
                                     content: "";
                                     position: absolute;
@@ -672,8 +702,10 @@ header {
                 &.active {
                     .language-area-mobil {
                         display: flex !important;
+
                         li {
                             margin-right: 1rem;
+
                             a {
                                 font-weight: 600;
                                 border: 1px solid var(--color-light-blue);
@@ -683,6 +715,7 @@ header {
                             }
                         }
                     }
+
                     @media screen and(max-width:$lg-breakpoint) {
                         position: absolute;
                         background-color: var(--color-white);
@@ -709,6 +742,7 @@ header {
                                         color: var(--color-white) !important;
                                     }
                                 }
+
                                 a {
                                     color: var(--color-light-blue);
                                 }
@@ -1263,6 +1297,7 @@ header {
                             font-weight: 500;
                             font-size: 1.5rem;
                             margin-bottom: 1rem;
+
                             @media screen and(max-width:$lg-breakpoint) {
                                 font-size: 1.3rem;
                             }
@@ -1642,19 +1677,23 @@ header {
 
                 .card-body {
                     height: 8rem;
+
                     .user-info {
                         text-align: left !important;
                     }
+
                     .button-area {
                         .button {
                             @include button;
                             color: var(--color-light-blue);
                             border-color: var(--color-light-blue);
                             margin-top: 0rem;
+
                             &::before,
                             &::after {
                                 border-color: var(--color-light-blue);
                             }
+
                             font-size: 1rem;
                         }
                     }
@@ -1702,13 +1741,11 @@ header {
                         left: 0;
                         right: 0;
                         transition: 0.6s all;
-                        background: -webkit-gradient(
-                            linear,
-                            left top,
-                            left bottom,
-                            from(rgba(0, 0, 0, 0)),
-                            to(#009fe3)
-                        );
+                        background: -webkit-gradient(linear,
+                                left top,
+                                left bottom,
+                                from(rgba(0, 0, 0, 0)),
+                                to(#009fe3));
                         background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #009fe3);
 
                         i {
@@ -2058,13 +2095,16 @@ header {
             object-fit: cover;
         }
     }
+
     .img-wrapper {
         position: relative;
+
         &:hover {
             &::before {
                 height: 100%;
             }
         }
+
         &::before {
             content: "";
             background-color: rgba(0, 0, 0, 0.555);
@@ -2267,12 +2307,14 @@ header {
 
     .card {
         @include card;
+
         .button {
             color: var(--color-light-blue);
             margin-top: 1rem;
             font-weight: 400;
             font-size: 1rem;
         }
+
         &:hover {
             transform: translateY(-10px);
 
@@ -2301,6 +2343,7 @@ header {
                 p {
                     color: var(--color-white);
                 }
+
                 .button {
                     color: var(--color-white);
                 }
@@ -2461,19 +2504,23 @@ header {
 
         .card-body {
             height: 10rem;
+
             .user-info {
                 text-align: left !important;
             }
+
             .button-area {
                 .button {
                     @include button;
                     color: var(--color-light-blue);
                     border-color: var(--color-light-blue);
                     margin-top: 0rem;
+
                     &::before,
                     &::after {
                         border-color: var(--color-light-blue);
                     }
+
                     font-size: 1rem;
                 }
             }
@@ -2584,6 +2631,7 @@ header {
                         transform: rotate(2deg) scale(1.2);
                     }
                 }
+
                 .tag {
                     background-color: var(--color-light-blue);
                     color: var(--color-white);
@@ -2624,6 +2672,7 @@ header {
             margin-top: 1rem;
             font-weight: 400;
             font-size: 1rem;
+
             i {
                 margin-left: 0.5rem;
             }
@@ -2686,6 +2735,7 @@ header {
     position: relative;
     min-height: 50vh;
     width: 100%;
+
     iframe {
         left: 0;
         top: 0;
@@ -2700,9 +2750,11 @@ header {
 .contact-page {
     padding: 5rem 2rem;
     position: relative;
+
     @media screen and(max-width:$lg-breakpoint) {
         padding: 2rem 1rem;
     }
+
     h6 {
         @include h6;
     }
@@ -2717,6 +2769,7 @@ header {
             @media screen and(max-width:$lg-breakpoint) {
                 margin-bottom: 2rem;
             }
+
             .button {
                 @include button;
                 color: var(--color-light-blue);
@@ -2732,18 +2785,22 @@ header {
                 }
             }
         }
+
         .bootstrap-datetimepicker-widget table th {
             height: 40px;
         }
+
         span {
             color: var(--color-gray-text);
             font-size: 0.8rem;
         }
+
         .form-control,
         .form-select {
             &:focus {
                 box-shadow: none;
             }
+
             padding: 0.7rem 0rem 0.7rem 1.2rem;
             border: none;
             border-bottom: 1px solid var(--color-light-blue);
@@ -2751,6 +2808,7 @@ header {
             background-color: transparent;
             color: var(--color-gray-text);
         }
+
         .form-check {
             margin-right: 2rem;
 
@@ -2760,10 +2818,12 @@ header {
                 }
             }
         }
+
         textarea {
             resize: none;
         }
     }
+
     .box {
         .icon-box {
             i {
@@ -2771,40 +2831,49 @@ header {
             }
         }
     }
+
     .contact-info {
         padding-left: 3rem;
+
         @media screen and(max-width:$xl-breakpoint) {
             padding-left: 1rem;
         }
 
         a {
             color: var(--color-gray-text);
+
             &:hover {
                 color: var(--color-light-blue);
             }
         }
+
         p {
             color: var(--color-gray-text);
             font-size: 1rem;
             max-width: 19rem;
             font-weight: 300;
         }
+
         h4 {
             color: var(--color-light-blue);
             font-weight: 500;
             font-size: 1.7rem;
+
             @media screen and(max-width:$lg-breakpoint) {
                 font-size: 1.3rem;
             }
         }
+
         .content {
             ul {
                 li {
                     margin-right: 1.5rem;
+
                     a {
                         color: var(--color-gray-text);
                         font-size: 1.2rem;
                         transition: 0.3s all;
+
                         &:hover {
                             color: var(--color-light-blue);
                         }
@@ -2818,9 +2887,11 @@ header {
 .appoinment-page {
     padding: 5rem 2rem;
     position: relative;
+
     @media screen and(max-width:$lg-breakpoint) {
         padding: 2rem 1rem;
     }
+
     h6 {
         @include h6;
     }
@@ -2829,11 +2900,13 @@ header {
         @include h3;
         margin-bottom: 2rem;
     }
+
     form {
         .button-area {
             @media screen and(max-width:$lg-breakpoint) {
                 margin-bottom: 2rem;
             }
+
             .button {
                 @include button;
                 color: var(--color-light-blue);
@@ -2849,18 +2922,22 @@ header {
                 }
             }
         }
+
         .bootstrap-datetimepicker-widget table th {
             height: 40px;
         }
+
         span {
             color: var(--color-gray-text);
             font-size: 0.8rem;
         }
+
         .form-control,
         .form-select {
             &:focus {
                 box-shadow: none;
             }
+
             padding: 0.7rem 0rem 0.7rem 1.2rem;
             border: none;
             border-bottom: 1px solid var(--color-light-blue);
@@ -2868,6 +2945,7 @@ header {
             background-color: transparent;
             color: var(--color-gray-text);
         }
+
         .form-check {
             margin-right: 2rem;
 
@@ -2877,6 +2955,7 @@ header {
                 }
             }
         }
+
         textarea {
             resize: none;
         }
@@ -3037,6 +3116,7 @@ footer {
     visibility: hidden;
     z-index: 1000;
     z-index: 99;
+
     &::after {
         content: "\f077";
         font-family: FontAwesome;
@@ -3046,13 +3126,16 @@ footer {
         line-height: 50px;
         color: var(--color-white);
     }
+
     &:hover {
         cursor: pointer;
         background-color: var(--color-gray-text);
     }
+
     &:active {
         background-color: var(--color-gray-text);
     }
+
     &.show {
         opacity: 1;
         visibility: visible;
