@@ -386,13 +386,6 @@ $xxl-breakpoint: 1400px; //Extra extra large
 }
 
 
-.megadropdown-slider .item {
-    height: 30vh;
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-}
-
 header {
     position: absolute;
     width: 100%;
@@ -594,11 +587,13 @@ header {
                         }
 
                         .dropdown-menu {
-                            min-width: 20rem;
+                            min-width: 15rem;
                             padding: 1rem;
                             border: none;
                             border-bottom: 2px solid var(--color-light-blue) !important;
-                            left: 0rem;
+                            &.mega-menu{
+                                left: 0rem;
+                            }
 
                             @media screen and(max-width:$lg-breakpoint) {
                                 height: 15rem;
@@ -619,6 +614,27 @@ header {
                             }
 
                             li {
+                                position: relative;
+                                padding-left: 0rem;
+                                &:hover {
+                                    &::before {
+                                        width: 100%;
+                                    }
+                                }
+
+                                &::before {
+                                    content: "";
+                                    position: absolute;
+                                    left: 0;
+                                    right: 0;
+                                    top: auto;
+                                    background-color: var(--color-light-blue);
+                                    width: 0;
+                                    height: 0.1rem;
+                                    border-radius: 2px;
+                                    bottom: -1px;
+                                    transition: all 0.3s ease-out;
+                                }
                                 a {
                                     color: var(--color-gray-text);
                                     font-size: 1rem;
@@ -671,25 +687,7 @@ header {
 
                                 position: relative;
 
-                                &:hover {
-                                    &::before {
-                                        width: 100%;
-                                    }
-                                }
-
-                                &::before {
-                                    content: "";
-                                    position: absolute;
-                                    left: 0;
-                                    right: 0;
-                                    top: auto;
-                                    background-color: var(--color-light-blue);
-                                    width: 0;
-                                    height: 0.1rem;
-                                    border-radius: 2px;
-                                    bottom: -1px;
-                                    transition: all 0.3s ease-out;
-                                }
+                               
                             }
                         }
                     }

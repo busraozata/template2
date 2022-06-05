@@ -34,13 +34,6 @@ a {
   --color-blue-2: #bbdefb;
 }
 
-.megadropdown-slider .item {
-  height: 30vh;
-  width: 100%;
-  background-position: center;
-  background-size: cover;
-}
-
 header {
   position: absolute;
   width: 100%;
@@ -196,10 +189,12 @@ header .header-inner .header-area .menu-area ul .nav-item a.active {
   color: var(--color-light-blue);
 }
 header .header-inner .header-area .menu-area ul .nav-item .dropdown-menu {
-  min-width: 20rem;
+  min-width: 15rem;
   padding: 1rem;
   border: none;
   border-bottom: 2px solid var(--color-light-blue) !important;
+}
+header .header-inner .header-area .menu-area ul .nav-item .dropdown-menu.mega-menu {
   left: 0rem;
 }
 @media screen and (max-width: 991px) {
@@ -221,6 +216,26 @@ header .header-inner .header-area .menu-area ul .nav-item .dropdown-menu img {
     border: none !important;
     padding: 0;
   }
+}
+header .header-inner .header-area .menu-area ul .nav-item .dropdown-menu li {
+  position: relative;
+  padding-left: 0rem;
+}
+header .header-inner .header-area .menu-area ul .nav-item .dropdown-menu li:hover::before {
+  width: 100%;
+}
+header .header-inner .header-area .menu-area ul .nav-item .dropdown-menu li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: auto;
+  background-color: var(--color-light-blue);
+  width: 0;
+  height: 0.1rem;
+  border-radius: 2px;
+  bottom: -1px;
+  transition: all 0.3s ease-out;
 }
 header .header-inner .header-area .menu-area ul .nav-item .dropdown-menu li a {
   color: var(--color-gray-text);
@@ -262,22 +277,6 @@ header .header-inner .header-area .menu-area ul .nav-item .sub-item li {
     padding: 0.5rem 0rem;
     margin: 0 0.5rem;
   }
-}
-header .header-inner .header-area .menu-area ul .nav-item .sub-item li:hover::before {
-  width: 100%;
-}
-header .header-inner .header-area .menu-area ul .nav-item .sub-item li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: auto;
-  background-color: var(--color-light-blue);
-  width: 0;
-  height: 0.1rem;
-  border-radius: 2px;
-  bottom: -1px;
-  transition: all 0.3s ease-out;
 }
 @media screen and (max-width: 991px) {
   header .header-inner .header-area .menu-area {
