@@ -19,7 +19,7 @@ btn.on('click', function (e) {
 
 /* ------------------------------------------------------------- */
 
-$(".mega-menu .sub-item .dropdown-item a").on("mouseover", function () {
+$(".mega-menu .sub-item .dropdown-item").on("mouseover", function () {
     var imgPath = $(this).attr("data-image");
 
     $(".mega-menu .img-wrapper img").attr("src", imgPath);
